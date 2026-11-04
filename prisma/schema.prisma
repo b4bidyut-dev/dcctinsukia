@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String        @id @default(cuid())
+  name         String
+  email        String        @unique
+  phone        String?
+  studentId    String?
+  passwordHash String
+  role         String        @default("USER") // "ADMIN", "USER"
+  status       String        @default("ACTIVE") // "ACTIVE", "DEACTIVATED"
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  lastLoginAt  DateTime?
+
+  uploadedNotes Note[]        @relation("UploadedBy")
+  downloadLogs  DownloadLog[]
+  activityLogs  ActivityLog[]
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String?
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+
+  notes       Note[]
+}
+
+model Note {
+  id               String        @id @default(cuid())
+  title            String
+  description      String?
+  categoryId       String
+  category         Category      @relation(fields: [categoryId], references: [id])
+  course           String?       // DCA, PGDCA, ADCA, BCA, Office Suite, etc.
+  topic            String?       // Chapter or topic title
+  academicSession  String?
+  language         String        @default("English")
+  storedFileName   String        @unique
+  originalFileName String
+  fileSize         Int           // Size in bytes
+  mimeType         String        @default("application/pdf")
+  uploadedById     String
+  uploadedBy       User          @relation("UploadedBy", fields: [uploadedById], references: [id])
+  status           String        @default("PUBLISHED") // "DRAFT", "PUBLISHED", "ARCHIVED", "UNPUBLISHED"
+  publicationDate  DateTime      @default(now())
+  downloadCount    Int           @default(0)
+  viewCount        Int           @default(0)
+  isDeleted        Boolean       @default(false)
+  deletedAt        DateTime?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  downloadLogs     DownloadLog[]
+}
+
+model DownloadLog {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  noteId    String
+  note      Note     @relation(fields: [noteId], references: [id], onDelete: Cascade)
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+}
+
+model ActivityLog {
+  id         String   @id @default(cuid())
+  userId     String?
+  user       User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  action     String   // "USER_LOGIN", "USER_REGISTER", "NOTE_UPLOAD", "NOTE_UPDATE", "NOTE_DELETE", "NOTE_DOWNLOAD"
+  targetType String?  // "NOTE", "USER", "AUTH", "CATEGORY"
+  targetId   String?
+  details    String?
+  status     String   @default("SUCCESS")
+  ipAddress  String?
+  createdAt  DateTime @default(now())
+}
+
