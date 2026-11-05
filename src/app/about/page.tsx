@@ -177,7 +177,7 @@ export default function AboutPage() {
                   +91-8974738131
                 </a>
               </p>
-              <p>Working Hours: 9:00 AM - 5:30 PM (Mon-Sat)</p>
+              <p>Working Hours: 8:00 AM - 6:00 PM (Mon-Sat)</p>
               <p className="text-[11px] text-emerald-300 pt-1 border-t border-emerald-900">
                 Developer: Bidyut Gogoi (9366125201)
               </p>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GraduationCap, MapPin, Mail, Phone, ShieldCheck, Heart, User } from "lucide-react";
+import { GraduationCap, MapPin, Mail, Phone, ShieldCheck, Heart, User, Clock } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -91,6 +91,10 @@ export default function Footer() {
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>info@dcctinsukia.in</span>
+              </div>
+              <div className="flex items-center space-x-2 text-[11px] text-amber-300/90 pt-1 border-t border-emerald-900/60">
+                <Clock className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                <span>Hours: 8:00 AM - 6:00 PM (Mon-Sat)</span>
               </div>
             </div>
           </div>
