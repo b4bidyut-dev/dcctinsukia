@@ -34,8 +34,16 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section with Official Dark Green & Dark Yellow Theme */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#061c11] via-[#0b291a] to-[#123824] text-white py-20 px-4 sm:px-6 lg:px-8 border-b border-[#144229]">
+      {/* Hero Section with Official Dark Green & Dark Yellow Theme + IT Tools Background */}
+      <section className="relative overflow-hidden bg-[#061c11] text-white py-20 px-4 sm:px-6 lg:px-8 border-b border-[#144229]">
+        {/* IT Tools Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25 mix-blend-luminosity scale-105 pointer-events-none"
+          style={{ backgroundImage: `url('/it-tools-hero-bg.jpg')` }}
+        />
+        {/* Dark Green Gradient Vignette for Readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#061c11]/90 via-[#0b291a]/80 to-[#081f14] pointer-events-none" />
+
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
 
