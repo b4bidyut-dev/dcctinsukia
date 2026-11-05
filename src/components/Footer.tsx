@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="text-lg font-bold text-white tracking-tight">DCC Tinsukia</span>
             </div>
             <p className="text-xs text-slate-300 leading-relaxed">
-              District Computer Centre Tinsukia is dedicated to imparting industry-aligned IT and computer literacy across upper Assam in coordination with AMTRON and Government of Assam. Providing official academic notes, practical lab manuals, and exam preparation resources.
+              District Computer Centre Tinsukia operates under an initiative by AMTRON in coordination with the <strong className="text-white font-semibold">Government of Assam&apos;s Department of Secondary Education</strong> (originally under the 11th Finance Commission Computer Education Programme).
             </p>
             <div className="flex items-center space-x-2 text-xs text-amber-400 font-semibold">
               <ShieldCheck className="w-4 h-4 text-amber-400" />

@@ -69,7 +69,7 @@ export default function Navbar() {
             <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/40">
               AMTRON Recognized
             </span>
-            <span className="text-slate-300 font-medium">District Computer Centre, Tinsukia, Assam</span>
+            <span className="text-slate-300 font-medium">Govt. of Assam Dept. of Secondary Education · DCC Tinsukia</span>
           </div>
           <div className="flex items-center space-x-4 text-slate-300">
             <span>Help: <a href="tel:+918974738131" className="text-amber-400 font-bold hover:underline">+91-8974738131</a></span>

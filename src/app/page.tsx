@@ -13,6 +13,7 @@ import {
   CheckCircle2,
   Clock,
   Layers,
+  Building2,
 } from "lucide-react";
 
 export default async function HomePage() {
@@ -43,9 +44,9 @@ export default async function HomePage() {
             <img src="/logo.png" alt="District Computer Centre Logo" className="h-14 w-auto object-contain" />
           </div>
 
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
-            Official Academic Material Repository · AMTRON Recognized
+            AMTRON Recognized · Govt. of Assam Dept. of Secondary Education
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
@@ -100,6 +101,37 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Government Affiliation & History Banner */}
+      <div className="bg-[#081f14] text-white border-b border-[#144229] py-4 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <div className="flex items-center gap-3.5">
+            <div className="w-10 h-10 rounded-xl bg-[#0b291a] border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 shadow-inner">
+              <Building2 className="w-5 h-5" />
+            </div>
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-wider text-amber-400 flex items-center gap-2 justify-center md:justify-start">
+                <span>Government Initiative</span>
+                <span className="w-1 h-1 rounded-full bg-amber-400"></span>
+                <span className="text-emerald-300">AMTRON Coordination</span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-200 mt-0.5 font-medium leading-relaxed">
+                Established under an initiative by AMTRON in coordination with the{" "}
+                <span className="text-amber-300 font-bold">
+                  Government of Assam&apos;s Department of Secondary Education
+                </span>{" "}
+                (originally under the 11th Finance Commission Computer Education Programme).
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/about"
+            className="text-xs font-bold text-amber-400 hover:text-amber-300 bg-[#0b291a] hover:bg-[#144229] border border-amber-500/40 px-3.5 py-2 rounded-lg shrink-0 flex items-center gap-1.5 transition-all shadow-sm"
+          >
+            About Centre <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+      </div>
 
       {/* Featured / Recent Notes Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">

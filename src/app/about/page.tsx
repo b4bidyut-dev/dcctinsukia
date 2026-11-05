@@ -26,7 +26,7 @@ export default function AboutPage() {
             </div>
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/40">
               <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
-              Government Recognized Centre · Tinsukia, Assam
+              Govt. of Assam Dept. of Secondary Education · 11th Finance Commission Initiative
             </span>
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
               About District Computer Centre
