@@ -13,6 +13,7 @@ import {
   User,
   X,
   FileText,
+  Phone,
 } from "lucide-react";
 
 interface UserProfile {
@@ -86,15 +87,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-18 items-center">
           {/* Logo / Brand */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="h-11 px-2.5 py-1 bg-white rounded-lg flex items-center justify-center shadow-md shadow-emerald-950/40 group-hover:scale-105 transition-transform">
-              <img src="/logo.png" alt="DCC Logo" className="h-8 w-auto object-contain" />
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group min-w-0">
+            <div className="h-10 sm:h-11 px-2 py-1 bg-white rounded-lg flex items-center justify-center shadow-md shadow-emerald-950/40 group-hover:scale-105 transition-transform shrink-0">
+              <img src="/logo.png" alt="DCC Logo" className="h-7 sm:h-8 w-auto object-contain" />
             </div>
-            <div>
-              <div className="text-lg font-bold tracking-tight text-white flex items-center gap-1.5">
-                DCC Tinsukia <span className="text-amber-400 font-bold text-sm">Notes Portal</span>
+            <div className="min-w-0">
+              <div className="text-base sm:text-lg font-bold tracking-tight text-white flex items-center gap-1.5 truncate">
+                DCC Tinsukia <span className="text-amber-400 font-bold text-xs sm:text-sm">Notes Portal</span>
               </div>
-              <div className="text-xs text-emerald-200 font-normal">
+              <div className="text-[11px] sm:text-xs text-emerald-200 font-normal truncate">
                 District Computer Centre · Academic Repository
               </div>
             </div>
@@ -340,6 +341,19 @@ export default function Navbar() {
                 </Link>
               </>
             )}
+          </div>
+
+          <div className="pt-3 border-t border-emerald-900/80 space-y-2">
+            <a
+              href="tel:+918974738131"
+              className="flex items-center justify-center gap-2 py-2.5 px-3 text-xs font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 rounded-lg shadow transition-colors"
+            >
+              <Phone className="w-4 h-4 text-slate-950" />
+              Call Helpline: +91-8974738131
+            </a>
+            <div className="text-[11px] text-center text-emerald-200">
+              Govt. of Assam Dept. of Secondary Education · AMTRON
+            </div>
           </div>
         </div>
       )}
