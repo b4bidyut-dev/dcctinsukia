@@ -80,7 +80,7 @@ export default function Footer() {
             <div className="space-y-2.5 text-xs text-slate-400">
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                <span>District Computer Centre, Near DC Office Road, Tinsukia, Assam - 786125</span>
+                <span>District Computer Centre, Senairam Higher Secondary School Campus, Dist- Tinsukia, Assam, Pin 786125</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-amber-400 shrink-0" />

@@ -124,8 +124,8 @@ export default function AboutPage() {
             <div className="space-y-1">
               <div className="font-bold text-white">Campus Address</div>
               <p>District Computer Centre</p>
-              <p>Near DC Office Road / Court Field</p>
-              <p>Tinsukia, Assam - 786125</p>
+              <p>Senairam Higher Secondary School Campus</p>
+              <p>Dist- Tinsukia, Assam, Pin 786125</p>
             </div>
 
             <div className="space-y-1">
