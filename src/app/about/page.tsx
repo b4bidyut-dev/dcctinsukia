@@ -173,8 +173,8 @@ export default function AboutPage() {
               <div className="font-bold text-amber-400 uppercase tracking-wider text-xs">Contact Helplines</div>
               <p className="text-white font-semibold flex items-center gap-1.5">
                 <Phone className="w-3.5 h-3.5 text-amber-400" />
-                <a href="tel:+91897438131" className="hover:text-amber-300">
-                  +91-897438131
+                <a href="tel:+918974738131" className="hover:text-amber-300">
+                  +91-8974738131
                 </a>
               </p>
               <p>Working Hours: 9:00 AM - 5:30 PM (Mon-Sat)</p>

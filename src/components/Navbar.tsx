@@ -72,7 +72,7 @@ export default function Navbar() {
             <span className="text-slate-300 font-medium">District Computer Centre, Tinsukia, Assam</span>
           </div>
           <div className="flex items-center space-x-4 text-slate-300">
-            <span>Help: <a href="tel:+91897438131" className="text-amber-400 font-bold hover:underline">+91-897438131</a></span>
+            <span>Help: <a href="tel:+918974738131" className="text-amber-400 font-bold hover:underline">+91-8974738131</a></span>
             {user && (
               <span className="text-amber-300 font-medium border-l border-emerald-900 pl-3">
                 Welcome, {user.name} ({user.role})
