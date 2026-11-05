@@ -10,6 +10,8 @@ import {
   Users,
   Computer,
   CheckCircle2,
+  Building2,
+  ExternalLink,
 } from "lucide-react";
 
 export default function AboutPage() {
@@ -31,6 +33,31 @@ export default function AboutPage() {
             </h1>
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
               Pioneering practical, employment-focused computer training and technical education for over two decades across Tinsukia district and Upper Assam.
+            </p>
+          </div>
+        </div>
+
+        {/* Network & AMTRON Affiliation Notice */}
+        <div className="bg-white p-6 sm:p-8 rounded-2xl border-l-4 border-l-blue-600 border border-slate-200 shadow-sm flex items-start gap-4">
+          <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center shrink-0 mt-0.5">
+            <Building2 className="w-6 h-6" />
+          </div>
+          <div className="space-y-1.5">
+            <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+              Network & Government Coordination
+            </h3>
+            <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
+              The District Computer Centre (DCC) is a network of government-operated computer training and digital literacy institutes established across the districts of Assam in coordination with{" "}
+              <a
+                href="https://et.amtron.in/center/index"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-blue-600 hover:text-blue-800 underline decoration-blue-300 underline-offset-2 transition-colors inline-flex items-center gap-1"
+              >
+                AMTRON
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>{" "}
+              (Assam Electronics Development Corporation Limited) and the Government of Assam.
             </p>
           </div>
         </div>
