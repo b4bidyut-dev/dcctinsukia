@@ -54,11 +54,6 @@ export default function Footer() {
                   Administrative Access
                 </Link>
               </li>
-              <li className="pt-1">
-                <Link href="/preview/samsung" className="text-amber-400 hover:text-amber-300 transition-colors flex items-center gap-1 font-semibold">
-                  <span>📱 Samsung Mobile View</span>
-                </Link>
-              </li>
             </ul>
           </div>
 
