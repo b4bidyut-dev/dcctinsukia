@@ -35,7 +35,7 @@ BT
 0 -30 Td
 (District Computer Centre - Authorized IT Education Centre, Tinsukia, Assam) Tj
 0 -20 Td
-(Official Study Material for DCA / PGDCA Students) Tj
+(Official Study Material for DCA / PGDCSA / DO & FA Students) Tj
 0 -30 Td
 (Key Topics:) Tj
 0 -20 Td
@@ -143,7 +143,7 @@ async function main() {
       title: "MS Excel Mastery - Formulas, Pivot Tables & Data Analysis",
       description: "Comprehensive guide for spreadsheet formulas (VLOOKUP, XLOOKUP, IF), charting, and data management in Excel.",
       categoryName: "MS Office Suite",
-      course: "PGDCA",
+      course: "PGDCSA",
       topic: "Advanced Spreadsheets",
       session: "2025-2026",
       fileName: "dcc_excel_formulas.pdf",
@@ -161,7 +161,7 @@ async function main() {
       title: "Database Management - Relational Algebra & SQL Command Reference",
       description: "DDL, DML, DCL commands, normalization (1NF to 3NF), and subqueries for relational databases.",
       categoryName: "Database Management Systems",
-      course: "PGDCA",
+      course: "PGDCSA",
       topic: "SQL Queries and Normalization",
       session: "2025-2026",
       fileName: "dcc_dbms_sql.pdf",

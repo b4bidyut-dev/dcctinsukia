@@ -294,10 +294,12 @@ export default function UploadFormClient({ categories }: UploadFormClientProps) 
             className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
           >
             <option value="DCA">DCA (Diploma in Computer Application)</option>
-            <option value="PGDCA">PGDCA (Post Graduate Diploma)</option>
-            <option value="ADCA">ADCA (Advanced Diploma)</option>
+            <option value="PGDCSA">PGDCSA (Post Graduate Diploma in Computer Software Applications)</option>
+            <option value="ADCA">ADCA (Advanced Diploma in Computer Applications)</option>
+            <option value="DO & FA">DO & FA (Diploma in Office & Financial Accounting)</option>
+            <option value="DO">DO (Diploma in Office Automation)</option>
+            <option value="FA">FA (Financial Accounting - Tally Prime)</option>
             <option value="CCC">CCC (Course on Computer Concepts)</option>
-            <option value="Tally & Financial Accounting">Tally & Financial Accounting</option>
             <option value="Assam IT Exam Preparation">Assam IT Exam Preparation</option>
             <option value="General IT Studies">General IT Studies</option>
           </select>

@@ -113,34 +113,42 @@ export default function AboutPage() {
             </div>
 
             <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 space-y-2">
-              <div className="font-bold text-sm text-slate-900">PGDCA</div>
-              <div className="text-xs text-emerald-800 font-semibold">Post Graduate Diploma</div>
+              <div className="font-bold text-sm text-slate-900">PGDCSA</div>
+              <div className="text-xs text-emerald-800 font-semibold">Post Graduate Diploma in Computer Software Applications</div>
               <p className="text-xs text-slate-600">
-                Advanced programming, Relational Database Management (RDBMS/SQL), software engineering, and system design.
+                Advanced software engineering, modern programming, Relational Database Management (RDBMS/SQL), and systems analysis.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 space-y-2">
+              <div className="font-bold text-sm text-slate-900">DO & FA</div>
+              <div className="text-xs text-emerald-800 font-semibold">Diploma in Office & Financial Accounting</div>
+              <p className="text-xs text-slate-600">
+                Integrated course covering office automation (Word/Excel/PowerPoint), business correspondence, and Tally Prime with GST.
               </p>
             </div>
 
             <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 space-y-2">
               <div className="font-bold text-sm text-slate-900">ADCA</div>
-              <div className="text-xs text-emerald-800 font-semibold">Advanced Diploma</div>
+              <div className="text-xs text-emerald-800 font-semibold">Advanced Diploma in Computer Applications</div>
               <p className="text-xs text-slate-600">
                 Desktop publishing, graphics (Photoshop/CorelDraw), financial accounting, and modern web concepts.
               </p>
             </div>
 
             <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 space-y-2">
-              <div className="font-bold text-sm text-slate-900">CCC & BCC</div>
-              <div className="text-xs text-emerald-800 font-semibold">Certificates on Computer Concepts</div>
+              <div className="font-bold text-sm text-slate-900">FA (Financial Accounting)</div>
+              <div className="text-xs text-emerald-800 font-semibold">Tally Prime & GST Filing</div>
               <p className="text-xs text-slate-600">
-                Nationally recognized computer literacy courses covering essential digital workflows.
+                Ledger management, voucher entry, inventory, bank reconciliation, and statutory GST reports.
               </p>
             </div>
 
             <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 space-y-2">
-              <div className="font-bold text-sm text-slate-900">Financial Accounting</div>
-              <div className="text-xs text-emerald-800 font-semibold">Tally Prime & GST Filing</div>
+              <div className="font-bold text-sm text-slate-900">DO (Office Automation)</div>
+              <div className="text-xs text-emerald-800 font-semibold">Diploma in Office Operations</div>
               <p className="text-xs text-slate-600">
-                Ledger management, voucher entry, inventory, bank reconciliation, and GST reports.
+                Official documentation, spreadsheet data management, presentation drafting, and office IT skills.
               </p>
             </div>
 
