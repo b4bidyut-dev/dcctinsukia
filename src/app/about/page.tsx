@@ -42,22 +42,33 @@ export default function AboutPage() {
           <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
             <Building2 className="w-6 h-6" />
           </div>
-          <div className="space-y-1.5">
-            <h3 className="text-xs font-bold text-emerald-800 uppercase tracking-wider">
-              Network & Government Coordination
-            </h3>
-            <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
-              The District Computer Centre (DCC) is a network of government-operated computer training and digital literacy institutes established across the districts of Assam in coordination with{" "}
+          <div className="space-y-2">
+            <div className="flex items-center justify-between flex-wrap gap-2">
+              <h3 className="text-xs font-bold text-emerald-800 uppercase tracking-wider">
+                Network & Government Coordination
+              </h3>
               <a
                 href="https://et.amtron.in/center/index"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-xs font-semibold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 transition-colors"
+              >
+                AMTRON Centres Directory
+                <ExternalLink className="w-3 h-3 text-amber-500" />
+              </a>
+            </div>
+            <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
+              The District Computer Centres (DCCs) are government-operated computer training and digital literacy centers established across various districts in Assam under an initiative by AMTRON (
+              <a
+                href="http://amtron.in/node.php?lnk=AMThstr"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-bold text-emerald-700 hover:text-emerald-900 underline decoration-amber-500 underline-offset-2 transition-colors inline-flex items-center gap-1"
               >
-                AMTRON
+                Assam Electronics Development Corporation Ltd.
                 <ExternalLink className="w-3.5 h-3.5 text-amber-500" />
-              </a>{" "}
-              (Assam Electronics Development Corporation Limited) and the Government of Assam.
+              </a>
+              ) in coordination with the Government of Assam&apos;s Department of Secondary Education (originally under the 11th Finance Commission Computer Education Programme).
             </p>
           </div>
         </div>
