@@ -70,7 +70,7 @@ function LoginForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="student@dcctinsukia.in"
-            className="block w-full pl-9 pr-3 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0f2842] focus:border-transparent transition-all outline-none"
+            className="block w-full pl-9 pr-3 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 focus:border-transparent transition-all outline-none"
           />
         </div>
       </div>
@@ -91,7 +91,7 @@ function LoginForm() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="••••••••"
-            className="block w-full pl-9 pr-3 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0f2842] focus:border-transparent transition-all outline-none"
+            className="block w-full pl-9 pr-3 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 focus:border-transparent transition-all outline-none"
           />
         </div>
       </div>
@@ -99,7 +99,7 @@ function LoginForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full py-3 px-4 rounded-lg bg-[#0f2842] hover:bg-slate-900 text-white font-semibold text-sm shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-60"
+        className="w-full py-3 px-4 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-60"
       >
         {loading ? "Verifying..." : "Sign In to Portal"}
         {!loading && <ArrowRight className="w-4 h-4" />}

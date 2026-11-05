@@ -51,7 +51,7 @@ export default function PdfViewerClient({ pdfUrl, title }: PdfViewerClientProps)
       }`}
     >
       {/* Control Toolbar */}
-      <div className="bg-[#12263a] px-4 py-2 border-b border-slate-700/80 flex items-center justify-between text-xs text-slate-300">
+      <div className="bg-[#0b291a] px-4 py-2 border-b border-[#144229] flex items-center justify-between text-xs text-slate-300">
         <div className="flex items-center space-x-2">
           <span className="font-medium text-slate-400">Zoom:</span>
           <button

@@ -122,7 +122,7 @@ export default function UsersManagementTable({
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search by name, email, student ID..."
-            className="w-full pl-9 pr-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0f2842] outline-none"
+            className="w-full pl-9 pr-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
           />
         </div>
 
@@ -130,7 +130,7 @@ export default function UsersManagementTable({
           <select
             value={roleFilter}
             onChange={(e) => setRoleFilter(e.target.value)}
-            className="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0f2842] outline-none"
+            className="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
           >
             <option value="">All Roles</option>
             <option value="USER">Student (USER)</option>
@@ -142,7 +142,7 @@ export default function UsersManagementTable({
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0f2842] outline-none"
+            className="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
           >
             <option value="">All Statuses</option>
             <option value="ACTIVE">Active Accounts</option>

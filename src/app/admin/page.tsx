@@ -67,16 +67,16 @@ export default async function AdminDashboardPage() {
     <div className="bg-slate-50 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Admin Header */}
-        <div className="bg-[#0f2842] text-white p-6 sm:p-8 rounded-2xl shadow-xl border border-[#1b436c] flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="bg-[#0b291a] text-white p-6 sm:p-8 rounded-2xl shadow-xl border border-[#144229] flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-semibold">
-              <Shield className="w-3.5 h-3.5" />
-              Administrative Control Centre
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/40">
+              <Shield className="w-3.5 h-3.5 text-amber-400" />
+              Administrative Control Centre · DCC Tinsukia
             </div>
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
               DCC Tinsukia Admin Dashboard
             </h1>
-            <p className="text-xs sm:text-sm text-slate-300 max-w-2xl">
+            <p className="text-xs sm:text-sm text-emerald-100 max-w-2xl">
               System overview, upload control, student accounts, and secure document distribution analytics.
             </p>
           </div>
@@ -91,7 +91,7 @@ export default async function AdminDashboardPage() {
             </Link>
             <Link
               href="/admin/notes"
-              className="px-4 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs border border-slate-600 transition-all flex items-center gap-2"
+              className="px-4 py-2.5 rounded-lg bg-[#144229] hover:bg-[#1a5535] text-amber-300 font-bold text-xs border border-amber-500/40 transition-all flex items-center gap-2"
             >
               <BookOpen className="w-4 h-4 text-amber-400" />
               Manage Notes

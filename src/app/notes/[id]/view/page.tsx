@@ -48,22 +48,22 @@ export default async function NoteViewPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-slate-900 flex flex-col text-white">
       {/* Viewer Header */}
-      <div className="bg-[#0b1c2e] border-b border-slate-800 px-4 py-3 flex flex-wrap items-center justify-between gap-4 sticky top-18 z-40">
+      <div className="bg-[#081f14] border-b border-[#144229] px-4 py-3 flex flex-wrap items-center justify-between gap-4 sticky top-18 z-40">
         <div className="flex items-center space-x-3">
           <Link
             href="/library"
-            className="p-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+            className="p-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-emerald-950 transition-colors"
             title="Back to Notes Library"
           >
-            <ArrowLeft className="w-5 h-5" />
+            <ArrowLeft className="w-5 h-5 text-amber-400" />
           </Link>
           <div>
             <div className="flex items-center gap-2">
-              <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-blue-900/60 text-blue-300 border border-blue-700">
+              <span className="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                 {note.category.name}
               </span>
               {note.course && (
-                <span className="text-[11px] text-slate-400">
+                <span className="text-[11px] text-emerald-200">
                   {note.course}
                 </span>
               )}
@@ -96,12 +96,12 @@ export default async function NoteViewPage({ params }: PageProps) {
       </div>
 
       {/* Footer Info Banner */}
-      <div className="bg-[#0b1c2e] border-t border-slate-800/80 px-4 py-2 text-xs text-slate-400 flex flex-wrap items-center justify-between">
+      <div className="bg-[#081f14] border-t border-[#144229] px-4 py-2 text-xs text-slate-400 flex flex-wrap items-center justify-between">
         <div className="flex items-center space-x-2">
           <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
-          <span>District Computer Centre Tinsukia · Official Verified Note</span>
+          <span className="text-slate-300">District Computer Centre Tinsukia · Official Verified Note</span>
         </div>
-        <div className="text-[11px] text-slate-500">
+        <div className="text-[11px] text-emerald-300">
           Published by {note.uploadedBy.name} on{" "}
           {new Date(note.publicationDate).toLocaleDateString("en-IN", {
             day: "numeric",

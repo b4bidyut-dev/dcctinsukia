@@ -19,31 +19,31 @@ export default function AboutPage() {
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto space-y-10">
         {/* Header Hero */}
-        <div className="bg-[#0f2842] text-white p-8 sm:p-12 rounded-3xl shadow-xl relative overflow-hidden border border-[#1e4875]">
+        <div className="bg-[#0b291a] text-white p-8 sm:p-12 rounded-3xl shadow-xl relative overflow-hidden border border-[#144229]">
           <div className="relative z-10 max-w-2xl space-y-4">
             <div className="h-14 px-3.5 py-1.5 bg-white rounded-xl flex items-center justify-center shadow w-fit">
               <img src="/logo.png" alt="DCC Logo" className="h-9 w-auto object-contain" />
             </div>
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-semibold">
-              <ShieldCheck className="w-3.5 h-3.5" />
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/40">
+              <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
               Government Recognized Centre · Tinsukia, Assam
             </span>
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
               About District Computer Centre
             </h1>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+            <p className="text-sm sm:text-base text-emerald-100 leading-relaxed">
               Pioneering practical, employment-focused computer training and technical education for over two decades across Tinsukia district and Upper Assam.
             </p>
           </div>
         </div>
 
         {/* Network & AMTRON Affiliation Notice */}
-        <div className="bg-white p-6 sm:p-8 rounded-2xl border-l-4 border-l-blue-600 border border-slate-200 shadow-sm flex items-start gap-4">
-          <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center shrink-0 mt-0.5">
+        <div className="bg-white p-6 sm:p-8 rounded-2xl border-l-4 border-l-emerald-700 border border-slate-200 shadow-sm flex items-start gap-4">
+          <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
             <Building2 className="w-6 h-6" />
           </div>
           <div className="space-y-1.5">
-            <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <h3 className="text-xs font-bold text-emerald-800 uppercase tracking-wider">
               Network & Government Coordination
             </h3>
             <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
@@ -52,10 +52,10 @@ export default function AboutPage() {
                 href="https://et.amtron.in/center/index"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-blue-600 hover:text-blue-800 underline decoration-blue-300 underline-offset-2 transition-colors inline-flex items-center gap-1"
+                className="font-bold text-emerald-700 hover:text-emerald-900 underline decoration-amber-500 underline-offset-2 transition-colors inline-flex items-center gap-1"
               >
                 AMTRON
-                <ExternalLink className="w-3.5 h-3.5" />
+                <ExternalLink className="w-3.5 h-3.5 text-amber-500" />
               </a>{" "}
               (Assam Electronics Development Corporation Limited) and the Government of Assam.
             </p>
@@ -75,7 +75,7 @@ export default function AboutPage() {
           </div>
 
           <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center">
               <Computer className="w-6 h-6" />
             </div>
             <h2 className="text-lg font-bold text-slate-900">Training Methodology</h2>
@@ -93,49 +93,49 @@ export default function AboutPage() {
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-4 rounded-xl border border-slate-100 bg-slate-50 space-y-2">
+            <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 space-y-2">
               <div className="font-bold text-sm text-slate-900">DCA</div>
-              <div className="text-xs text-slate-500 font-medium">Diploma in Computer Applications</div>
+              <div className="text-xs text-emerald-800 font-semibold">Diploma in Computer Applications</div>
               <p className="text-xs text-slate-600">
                 Foundations of computing, Windows OS, MS Office Suite, Internet & Email operations.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl border border-slate-100 bg-slate-50 space-y-2">
+            <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 space-y-2">
               <div className="font-bold text-sm text-slate-900">PGDCA</div>
-              <div className="text-xs text-slate-500 font-medium">Post Graduate Diploma</div>
+              <div className="text-xs text-emerald-800 font-semibold">Post Graduate Diploma</div>
               <p className="text-xs text-slate-600">
                 Advanced programming, Relational Database Management (RDBMS/SQL), software engineering, and system design.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl border border-slate-100 bg-slate-50 space-y-2">
+            <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 space-y-2">
               <div className="font-bold text-sm text-slate-900">ADCA</div>
-              <div className="text-xs text-slate-500 font-medium">Advanced Diploma</div>
+              <div className="text-xs text-emerald-800 font-semibold">Advanced Diploma</div>
               <p className="text-xs text-slate-600">
                 Desktop publishing, graphics (Photoshop/CorelDraw), financial accounting, and modern web concepts.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl border border-slate-100 bg-slate-50 space-y-2">
+            <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 space-y-2">
               <div className="font-bold text-sm text-slate-900">CCC & BCC</div>
-              <div className="text-xs text-slate-500 font-medium">Certificates on Computer Concepts</div>
+              <div className="text-xs text-emerald-800 font-semibold">Certificates on Computer Concepts</div>
               <p className="text-xs text-slate-600">
                 Nationally recognized computer literacy courses covering essential digital workflows.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl border border-slate-100 bg-slate-50 space-y-2">
+            <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 space-y-2">
               <div className="font-bold text-sm text-slate-900">Financial Accounting</div>
-              <div className="text-xs text-slate-500 font-medium">Tally Prime & GST Filing</div>
+              <div className="text-xs text-emerald-800 font-semibold">Tally Prime & GST Filing</div>
               <p className="text-xs text-slate-600">
                 Ledger management, voucher entry, inventory, bank reconciliation, and GST reports.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl border border-slate-100 bg-slate-50 space-y-2">
+            <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 space-y-2">
               <div className="font-bold text-sm text-slate-900">Programming Tracks</div>
-              <div className="text-xs text-slate-500 font-medium">C, C++, Java, & Python</div>
+              <div className="text-xs text-emerald-800 font-semibold">C, C++, Java, & Python</div>
               <p className="text-xs text-slate-600">
                 Logic building, object-oriented concepts, algorithms, and practical code solutions.
               </p>
@@ -144,7 +144,7 @@ export default function AboutPage() {
         </div>
 
         {/* Contact & Location */}
-        <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-md border border-slate-800 space-y-6">
+        <div className="bg-[#081f14] text-white p-8 rounded-2xl shadow-md border border-[#144229] space-y-6">
           <h2 className="text-xl font-bold text-white flex items-center gap-2">
             <MapPin className="w-5 h-5 text-amber-400" />
             Centre Location & Inquiries
@@ -152,21 +152,28 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm text-slate-300">
             <div className="space-y-1">
-              <div className="font-bold text-white">Campus Address</div>
-              <p>District Computer Centre</p>
+              <div className="font-bold text-amber-400 uppercase tracking-wider text-xs">Campus Address</div>
+              <p className="font-medium text-white">"District Computer centre"</p>
               <p>Senairam Higher Secondary School Campus</p>
               <p>Dist- Tinsukia, Assam, Pin 786125</p>
             </div>
 
             <div className="space-y-1">
-              <div className="font-bold text-white">Contact Helplines</div>
-              <p>Landline: +91 (0374) 233-XXXX</p>
-              <p>Mobile: +91 98765-XXXXX</p>
+              <div className="font-bold text-amber-400 uppercase tracking-wider text-xs">Contact Helplines</div>
+              <p className="text-white font-semibold flex items-center gap-1.5">
+                <Phone className="w-3.5 h-3.5 text-amber-400" />
+                <a href="tel:+91897438131" className="hover:text-amber-300">
+                  +91-897438131
+                </a>
+              </p>
               <p>Working Hours: 9:00 AM - 5:30 PM (Mon-Sat)</p>
+              <p className="text-[11px] text-emerald-300 pt-1 border-t border-emerald-900">
+                Developer: Bidyut Gogoi (9366125201)
+              </p>
             </div>
 
             <div className="space-y-1">
-              <div className="font-bold text-white">Electronic Mail</div>
+              <div className="font-bold text-amber-400 uppercase tracking-wider text-xs">Electronic Mail</div>
               <p>General Queries: info@dcctinsukia.in</p>
               <p>Academics: notes@dcctinsukia.in</p>
               <p>Support: support@dcctinsukia.in</p>
@@ -177,4 +184,3 @@ export default function AboutPage() {
     </div>
   );
 }
-

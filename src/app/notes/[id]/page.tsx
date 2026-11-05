@@ -50,7 +50,7 @@ export default async function NoteDetailsPage({ params }: NoteDetailsProps) {
         {/* Navigation Breadcrumb */}
         <Link
           href="/library"
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-[#0f2842] transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-emerald-900 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Notes Library
@@ -59,13 +59,13 @@ export default async function NoteDetailsPage({ params }: NoteDetailsProps) {
         {/* Main Note Card */}
         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
           {/* Card Header Banner */}
-          <div className="bg-[#0f2842] text-white p-6 sm:p-8">
+          <div className="bg-[#0b291a] text-white p-6 sm:p-8">
             <div className="flex flex-wrap items-center gap-2 mb-3">
-              <span className="px-3 py-1 rounded-md text-xs font-semibold bg-amber-500 text-slate-950">
+              <span className="px-3 py-1 rounded-md text-xs font-bold bg-amber-500 text-slate-950">
                 {note.category.name}
               </span>
               {note.course && (
-                <span className="px-2.5 py-1 rounded-md text-xs font-medium bg-blue-900/60 text-blue-200 border border-blue-700">
+                <span className="px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-900/60 text-emerald-200 border border-emerald-700">
                   {note.course}
                 </span>
               )}
@@ -109,9 +109,9 @@ export default async function NoteDetailsPage({ params }: NoteDetailsProps) {
             <div className="flex items-center space-x-3">
               <Link
                 href={`/notes/${note.id}/view`}
-                className="px-4 py-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-900 font-bold text-xs border border-blue-200 transition-colors flex items-center gap-1.5 shadow-sm"
+                className="px-4 py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-900 font-bold text-xs border border-emerald-200 transition-colors flex items-center gap-1.5 shadow-sm"
               >
-                <Eye className="w-4 h-4" />
+                <Eye className="w-4 h-4 text-emerald-700" />
                 Read Online
               </Link>
 

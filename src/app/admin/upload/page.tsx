@@ -21,7 +21,7 @@ export default async function AdminUploadPage() {
       <div className="max-w-3xl mx-auto space-y-6">
         <Link
           href="/admin"
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-[#0f2842] transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-emerald-900 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Admin Dashboard

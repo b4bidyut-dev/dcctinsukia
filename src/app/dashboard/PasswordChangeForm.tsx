@@ -74,7 +74,7 @@ export default function PasswordChangeForm() {
           value={currentPassword}
           onChange={(e) => setCurrentPassword(e.target.value)}
           placeholder="••••••••"
-          className="w-full px-3 py-1.5 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0f2842] outline-none"
+          className="w-full px-3 py-1.5 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
         />
       </div>
 
@@ -88,14 +88,14 @@ export default function PasswordChangeForm() {
           value={newPassword}
           onChange={(e) => setNewPassword(e.target.value)}
           placeholder="••••••••"
-          className="w-full px-3 py-1.5 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0f2842] outline-none"
+          className="w-full px-3 py-1.5 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
         />
       </div>
 
       <button
         type="submit"
         disabled={loading}
-        className="w-full py-2 bg-[#0f2842] hover:bg-slate-900 text-white rounded-lg text-xs font-semibold transition-colors disabled:opacity-60"
+        className="w-full py-2 bg-[#0b291a] hover:bg-emerald-950 text-amber-300 font-bold rounded-lg text-xs transition-colors disabled:opacity-60 border border-emerald-900"
       >
         {loading ? "Updating..." : "Update Password"}
       </button>

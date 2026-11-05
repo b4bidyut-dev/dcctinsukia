@@ -101,7 +101,7 @@ export default function RegisterPage() {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="e.g. Rahul Sharma"
-                className="block w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0f2842] focus:border-transparent outline-none"
+                className="block w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 focus:border-transparent outline-none"
               />
             </div>
           </div>
@@ -121,7 +121,7 @@ export default function RegisterPage() {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="name@example.com"
-                className="block w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0f2842] focus:border-transparent outline-none"
+                className="block w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 focus:border-transparent outline-none"
               />
             </div>
           </div>
@@ -141,7 +141,7 @@ export default function RegisterPage() {
                   value={form.phone}
                   onChange={handleChange}
                   placeholder="9876543210"
-                  className="block w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0f2842] focus:border-transparent outline-none"
+                  className="block w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 focus:border-transparent outline-none"
                 />
               </div>
             </div>
@@ -160,7 +160,7 @@ export default function RegisterPage() {
                   value={form.studentId}
                   onChange={handleChange}
                   placeholder="e.g. DCC-2026-042"
-                  className="block w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0f2842] focus:border-transparent outline-none"
+                  className="block w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 focus:border-transparent outline-none"
                 />
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function RegisterPage() {
                   value={form.password}
                   onChange={handleChange}
                   placeholder="Min 6 chars"
-                  className="block w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0f2842] focus:border-transparent outline-none"
+                  className="block w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 focus:border-transparent outline-none"
                 />
               </div>
             </div>
@@ -202,7 +202,7 @@ export default function RegisterPage() {
                   value={form.confirmPassword}
                   onChange={handleChange}
                   placeholder="Re-type password"
-                  className="block w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0f2842] focus:border-transparent outline-none"
+                  className="block w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 focus:border-transparent outline-none"
                 />
               </div>
             </div>

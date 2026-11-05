@@ -33,8 +33,8 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section with Official Deep Navy Blue Theme */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#0a192f] via-[#0f2842] to-[#122e4d] text-white py-20 px-4 sm:px-6 lg:px-8 border-b border-[#1c3c5e]">
+      {/* Hero Section with Official Dark Green & Dark Yellow Theme */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#061c11] via-[#0b291a] to-[#123824] text-white py-20 px-4 sm:px-6 lg:px-8 border-b border-[#144229]">
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
 
@@ -43,26 +43,26 @@ export default async function HomePage() {
             <img src="/logo.png" alt="District Computer Centre Logo" className="h-14 w-auto object-contain" />
           </div>
 
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
-            Official Academic Material Repository
+            Official Academic Material Repository · AMTRON Recognized
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
             District Computer Centre <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-200">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-200">
               Tinsukia Notes Portal
             </span>
           </h1>
 
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-emerald-100 font-normal leading-relaxed">
             Centralized digital repository providing authenticated access to high-quality computer study notes, syllabus-aligned handouts, and lab documentation for all enrolled students.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <Link
               href="/library"
-              className="px-6 py-3.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-lg shadow-amber-500/20 flex items-center gap-2 transition-all transform hover:-translate-y-0.5"
+              className="px-6 py-3.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-lg shadow-amber-500/30 flex items-center gap-2 transition-all transform hover:-translate-y-0.5"
             >
               <BookOpen className="w-4 h-4" />
               Browse Notes Library
@@ -71,7 +71,7 @@ export default async function HomePage() {
 
             <Link
               href="/register"
-              className="px-6 py-3.5 rounded-lg bg-[#1c3c5e]/80 hover:bg-[#1c3c5e] text-white font-semibold text-sm border border-slate-600 transition-all"
+              className="px-6 py-3.5 rounded-lg bg-[#144229] hover:bg-[#195233] text-amber-300 font-bold text-sm border border-amber-500/40 transition-all"
             >
               Student Registration
             </Link>
@@ -79,23 +79,23 @@ export default async function HomePage() {
 
           {/* Quick Metrics Bar */}
           <div className="pt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-700/60 backdrop-blur-sm">
+            <div className="p-4 rounded-xl bg-[#061c11]/80 border border-emerald-800/80 backdrop-blur-sm">
               <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">{totalNotes}+</div>
-              <div className="text-xs text-slate-300 mt-1">Verified PDF Notes</div>
+              <div className="text-xs text-emerald-200 mt-1 font-medium">Verified PDF Notes</div>
             </div>
-            <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-700/60 backdrop-blur-sm">
+            <div className="p-4 rounded-xl bg-[#061c11]/80 border border-emerald-800/80 backdrop-blur-sm">
               <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">{totalCategories}</div>
-              <div className="text-xs text-slate-300 mt-1">Academic Subjects</div>
+              <div className="text-xs text-emerald-200 mt-1 font-medium">Academic Subjects</div>
             </div>
-            <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-700/60 backdrop-blur-sm">
+            <div className="p-4 rounded-xl bg-[#061c11]/80 border border-emerald-800/80 backdrop-blur-sm">
               <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">
                 {totalDownloads._sum.downloadCount || 100}+
               </div>
-              <div className="text-xs text-slate-300 mt-1">Study Notes Downloaded</div>
+              <div className="text-xs text-emerald-200 mt-1 font-medium">Study Notes Downloaded</div>
             </div>
-            <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-700/60 backdrop-blur-sm">
+            <div className="p-4 rounded-xl bg-[#061c11]/80 border border-emerald-800/80 backdrop-blur-sm">
               <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">100%</div>
-              <div className="text-xs text-slate-300 mt-1">Faculty Authenticated</div>
+              <div className="text-xs text-emerald-200 mt-1 font-medium">Faculty Authenticated</div>
             </div>
           </div>
         </div>
@@ -105,7 +105,8 @@ export default async function HomePage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
           <div>
-            <div className="text-xs font-bold text-amber-600 uppercase tracking-wider">
+            <div className="text-xs font-bold text-emerald-800 uppercase tracking-wider flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-amber-500 inline-block"></span>
               Study Curriculum
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
@@ -117,7 +118,7 @@ export default async function HomePage() {
           </div>
           <Link
             href="/library"
-            className="mt-4 sm:mt-0 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0f2842] hover:text-amber-600 transition-colors"
+            className="mt-4 sm:mt-0 inline-flex items-center gap-1.5 text-sm font-bold text-emerald-900 hover:text-amber-600 transition-colors"
           >
             View all published notes
             <ArrowRight className="w-4 h-4" />
@@ -131,7 +132,7 @@ export default async function HomePage() {
               className="bg-white rounded-xl border border-slate-200 hover:border-amber-400 shadow-sm hover:shadow-md transition-all flex flex-col p-6 group"
             >
               <div className="flex items-start justify-between gap-3 mb-3">
-                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-50 text-emerald-900 border border-emerald-200">
                   {note.category.name}
                 </span>
                 <span className="text-[11px] font-mono text-slate-400 flex items-center gap-1">
@@ -144,7 +145,7 @@ export default async function HomePage() {
                 </span>
               </div>
 
-              <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-900 transition-colors line-clamp-2 mb-2">
+              <h3 className="text-base font-bold text-slate-900 group-hover:text-emerald-900 transition-colors line-clamp-2 mb-2">
                 {note.title}
               </h3>
 
@@ -155,7 +156,7 @@ export default async function HomePage() {
               {note.course && (
                 <div className="text-[11px] text-slate-500 mb-4 flex items-center gap-1.5">
                   <span className="font-semibold text-slate-700">Course:</span>
-                  <span className="bg-slate-100 px-2 py-0.5 rounded text-slate-800">{note.course}</span>
+                  <span className="bg-amber-50 border border-amber-200 px-2 py-0.5 rounded text-amber-900 font-semibold">{note.course}</span>
                 </div>
               )}
 
@@ -167,13 +168,13 @@ export default async function HomePage() {
                 <div className="flex items-center space-x-2">
                   <Link
                     href={`/notes/${note.id}/view`}
-                    className="px-3 py-1.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium transition-colors"
+                    className="px-3 py-1.5 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-900 font-semibold transition-colors"
                   >
                     View
                   </Link>
                   <Link
                     href={`/notes/${note.id}`}
-                    className="px-3 py-1.5 rounded bg-[#0f2842] hover:bg-slate-900 text-white font-medium transition-colors"
+                    className="px-3 py-1.5 rounded bg-[#0b291a] hover:bg-emerald-950 text-amber-300 font-semibold transition-colors"
                   >
                     Details
                   </Link>
@@ -185,7 +186,7 @@ export default async function HomePage() {
       </section>
 
       {/* Core Advantages Section */}
-      <section className="bg-slate-100/80 border-y border-slate-200 py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-emerald-50/50 border-y border-emerald-100 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
@@ -208,7 +209,7 @@ export default async function HomePage() {
             </div>
 
             <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
-              <div className="w-12 h-12 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold">
+              <div className="w-12 h-12 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">
                 <Layers className="w-6 h-6" />
               </div>
               <h3 className="text-base font-bold text-slate-900">Interactive Online PDF Reader</h3>
@@ -218,7 +219,7 @@ export default async function HomePage() {
             </div>
 
             <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
-              <div className="w-12 h-12 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
+              <div className="w-12 h-12 rounded-lg bg-yellow-100 text-yellow-800 flex items-center justify-center font-bold">
                 <Download className="w-6 h-6" />
               </div>
               <h3 className="text-base font-bold text-slate-900">Offline Download & Re-use</h3>
@@ -231,12 +232,12 @@ export default async function HomePage() {
       </section>
 
       {/* Banner / CTA Section */}
-      <section className="bg-[#0f2842] text-white py-14 px-4 sm:px-6 lg:px-8">
+      <section className="bg-[#0b291a] text-white py-14 px-4 sm:px-6 lg:px-8 border-t border-amber-500/30">
         <div className="max-w-5xl mx-auto text-center space-y-4">
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
             Ready to access your DCC course material?
           </h2>
-          <p className="text-sm text-slate-300 max-w-2xl mx-auto">
+          <p className="text-sm text-emerald-100 max-w-2xl mx-auto">
             Log in with your student credentials or register your account to view and download all course modules.
           </p>
           <div className="pt-2 flex justify-center gap-4">
@@ -248,7 +249,7 @@ export default async function HomePage() {
             </Link>
             <Link
               href="/login"
-              className="px-6 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg text-sm border border-white/20 transition-all"
+              className="px-6 py-2.5 bg-[#144229] hover:bg-[#1a5535] text-amber-300 font-bold rounded-lg text-sm border border-amber-500/40 transition-all"
             >
               Student Login
             </Link>
