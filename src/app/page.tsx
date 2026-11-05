@@ -34,75 +34,78 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section with Official Dark Green & Dark Yellow Theme + IT Tools Background */}
-      <section className="relative overflow-hidden bg-[#061c11] text-white py-20 px-4 sm:px-6 lg:px-8 border-b border-[#144229]">
-        {/* IT Tools Background Image */}
+      {/* Hero Section with Official Dark Green & Dark Yellow Theme + Semi-Transparent IT Tools Background */}
+      <section className="relative overflow-hidden bg-[#061c11] text-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-[#144229]">
+        {/* Semi-Transparent IT Tools Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25 mix-blend-luminosity scale-105 pointer-events-none"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 scale-105 pointer-events-none transition-opacity"
           style={{ backgroundImage: `url('/it-tools-hero-bg.jpg')` }}
         />
-        {/* Dark Green Gradient Vignette for Readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#061c11]/90 via-[#0b291a]/80 to-[#081f14] pointer-events-none" />
+        {/* Semi-Transparent Dark Green Tint Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#06180e]/75 via-[#0b291a]/65 to-[#06180e]/85 backdrop-blur-[2px] pointer-events-none" />
 
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
 
-        <div className="relative max-w-6xl mx-auto text-center space-y-6">
-          <div className="mx-auto h-20 px-6 py-2.5 bg-white rounded-2xl flex items-center justify-center shadow-xl w-fit mb-2">
-            <img src="/logo.png" alt="District Computer Centre Logo" className="h-14 w-auto object-contain" />
+        <div className="relative max-w-5xl mx-auto text-center">
+          {/* Semi-Transparent Frosted Glass Hero Container */}
+          <div className="backdrop-blur-md bg-[#06180e]/60 border border-emerald-500/30 p-6 sm:p-12 rounded-3xl shadow-2xl space-y-6">
+            <div className="mx-auto h-20 px-6 py-2.5 bg-white rounded-2xl flex items-center justify-center shadow-xl w-fit mb-2">
+              <img src="/logo.png" alt="District Computer Centre Logo" className="h-14 w-auto object-contain" />
+            </div>
+
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/50 text-amber-300 text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
+              <Sparkles className="w-3.5 h-3.5" />
+              AMTRON Recognized · Govt. of Assam Dept. of Secondary Education
+            </div>
+
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+              District Computer Centre <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-200">
+                Tinsukia Notes Portal
+              </span>
+            </h1>
+
+            <p className="max-w-3xl mx-auto text-base sm:text-lg text-emerald-100 font-normal leading-relaxed">
+              Centralized digital repository providing authenticated access to high-quality computer study notes, syllabus-aligned handouts, and lab documentation for all enrolled students.
+            </p>
+
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+              <Link
+                href="/library"
+                className="px-6 py-3.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-lg shadow-amber-500/30 flex items-center gap-2 transition-all transform hover:-translate-y-0.5"
+              >
+                <BookOpen className="w-4 h-4" />
+                Browse Notes Library
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+
+              <Link
+                href="/register"
+                className="px-6 py-3.5 rounded-lg bg-[#144229]/80 hover:bg-[#195233] text-amber-300 font-bold text-sm border border-amber-500/40 backdrop-blur-sm transition-all"
+              >
+                Student Registration
+              </Link>
+            </div>
           </div>
 
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5" />
-            AMTRON Recognized · Govt. of Assam Dept. of Secondary Education
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-            District Computer Centre <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-200">
-              Tinsukia Notes Portal
-            </span>
-          </h1>
-
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-emerald-100 font-normal leading-relaxed">
-            Centralized digital repository providing authenticated access to high-quality computer study notes, syllabus-aligned handouts, and lab documentation for all enrolled students.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-            <Link
-              href="/library"
-              className="px-6 py-3.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-lg shadow-amber-500/30 flex items-center gap-2 transition-all transform hover:-translate-y-0.5"
-            >
-              <BookOpen className="w-4 h-4" />
-              Browse Notes Library
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-
-            <Link
-              href="/register"
-              className="px-6 py-3.5 rounded-lg bg-[#144229] hover:bg-[#195233] text-amber-300 font-bold text-sm border border-amber-500/40 transition-all"
-            >
-              Student Registration
-            </Link>
-          </div>
-
-          {/* Quick Metrics Bar */}
-          <div className="pt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="p-4 rounded-xl bg-[#061c11]/80 border border-emerald-800/80 backdrop-blur-sm">
+          {/* Quick Metrics Bar with Semi-Transparent Glass Cards */}
+          <div className="pt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <div className="p-4 rounded-xl bg-[#06180e]/70 border border-emerald-700/50 backdrop-blur-md shadow-lg">
               <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">{totalNotes}+</div>
               <div className="text-xs text-emerald-200 mt-1 font-medium">Verified PDF Notes</div>
             </div>
-            <div className="p-4 rounded-xl bg-[#061c11]/80 border border-emerald-800/80 backdrop-blur-sm">
+            <div className="p-4 rounded-xl bg-[#06180e]/70 border border-emerald-700/50 backdrop-blur-md shadow-lg">
               <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">{totalCategories}</div>
               <div className="text-xs text-emerald-200 mt-1 font-medium">Academic Subjects</div>
             </div>
-            <div className="p-4 rounded-xl bg-[#061c11]/80 border border-emerald-800/80 backdrop-blur-sm">
+            <div className="p-4 rounded-xl bg-[#06180e]/70 border border-emerald-700/50 backdrop-blur-md shadow-lg">
               <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">
                 {totalDownloads._sum.downloadCount || 100}+
               </div>
               <div className="text-xs text-emerald-200 mt-1 font-medium">Study Notes Downloaded</div>
             </div>
-            <div className="p-4 rounded-xl bg-[#061c11]/80 border border-emerald-800/80 backdrop-blur-sm">
+            <div className="p-4 rounded-xl bg-[#06180e]/70 border border-emerald-700/50 backdrop-blur-md shadow-lg">
               <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">100%</div>
               <div className="text-xs text-emerald-200 mt-1 font-medium">Faculty Authenticated</div>
             </div>
