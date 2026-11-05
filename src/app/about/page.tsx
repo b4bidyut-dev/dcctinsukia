@@ -145,10 +145,10 @@ export default function AboutPage() {
             </div>
 
             <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 space-y-2">
-              <div className="font-bold text-sm text-slate-900">DOA (Office Automation)</div>
-              <div className="text-xs text-emerald-800 font-semibold">Diploma in Office Automation</div>
+              <div className="font-bold text-sm text-slate-900">DIA</div>
+              <div className="text-xs text-emerald-800 font-semibold">Diploma in Internet Applications</div>
               <p className="text-xs text-slate-600">
-                Official documentation, spreadsheet data management, presentation drafting, and modern office automation skills.
+                Web browsing fundamentals, email protocols, internet security, digital transactions, and online applications.
               </p>
             </div>
 

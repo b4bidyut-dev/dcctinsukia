@@ -67,7 +67,7 @@ export default function Footer() {
               <li>• PGDCSA (Post Graduate Diploma)</li>
               <li>• DOA &amp; FA (Office Automation &amp; Financial Accounting)</li>
               <li>• ADCA (Advanced Diploma)</li>
-              <li>• DOA (Diploma in Office Automation)</li>
+              <li>• DIA (Diploma in Internet Applications)</li>
               <li>• FA (Financial Accounting / Tally Prime)</li>
               <li>• Programming in C, C++, Java &amp; Python</li>
             </ul>
