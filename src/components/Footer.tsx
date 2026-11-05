@@ -70,9 +70,9 @@ export default function Footer() {
             <ul className="space-y-2 text-xs text-slate-300">
               <li>• DCA (Diploma in Computer Applications)</li>
               <li>• PGDCSA (Post Graduate Diploma)</li>
-              <li>• DO &amp; FA (Office &amp; Financial Accounting)</li>
+              <li>• DOA &amp; FA (Office Automation &amp; Financial Accounting)</li>
               <li>• ADCA (Advanced Diploma)</li>
-              <li>• DO (Diploma in Office Automation)</li>
+              <li>• DOA (Diploma in Office Automation)</li>
               <li>• FA (Financial Accounting / Tally Prime)</li>
               <li>• Programming in C, C++, Java &amp; Python</li>
             </ul>

@@ -121,8 +121,8 @@ export default function AboutPage() {
             </div>
 
             <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 space-y-2">
-              <div className="font-bold text-sm text-slate-900">DO & FA</div>
-              <div className="text-xs text-emerald-800 font-semibold">Diploma in Office & Financial Accounting</div>
+              <div className="font-bold text-sm text-slate-900">DOA & FA</div>
+              <div className="text-xs text-emerald-800 font-semibold">Diploma in Office Automation & Financial Accounting</div>
               <p className="text-xs text-slate-600">
                 Integrated course covering office automation (Word/Excel/PowerPoint), business correspondence, and Tally Prime with GST.
               </p>
@@ -145,10 +145,10 @@ export default function AboutPage() {
             </div>
 
             <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 space-y-2">
-              <div className="font-bold text-sm text-slate-900">DO (Office Automation)</div>
-              <div className="text-xs text-emerald-800 font-semibold">Diploma in Office Operations</div>
+              <div className="font-bold text-sm text-slate-900">DOA (Office Automation)</div>
+              <div className="text-xs text-emerald-800 font-semibold">Diploma in Office Automation</div>
               <p className="text-xs text-slate-600">
-                Official documentation, spreadsheet data management, presentation drafting, and office IT skills.
+                Official documentation, spreadsheet data management, presentation drafting, and modern office automation skills.
               </p>
             </div>
 

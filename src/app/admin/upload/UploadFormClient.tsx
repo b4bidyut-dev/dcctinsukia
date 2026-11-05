@@ -296,8 +296,8 @@ export default function UploadFormClient({ categories }: UploadFormClientProps) 
             <option value="DCA">DCA (Diploma in Computer Application)</option>
             <option value="PGDCSA">PGDCSA (Post Graduate Diploma in Computer Software Applications)</option>
             <option value="ADCA">ADCA (Advanced Diploma in Computer Applications)</option>
-            <option value="DO & FA">DO & FA (Diploma in Office & Financial Accounting)</option>
-            <option value="DO">DO (Diploma in Office Automation)</option>
+            <option value="DOA & FA">DOA & FA (Diploma in Office Automation & Financial Accounting)</option>
+            <option value="DOA">DOA (Diploma in Office Automation)</option>
             <option value="FA">FA (Financial Accounting - Tally Prime)</option>
             <option value="CCC">CCC (Course on Computer Concepts)</option>
             <option value="Assam IT Exam Preparation">Assam IT Exam Preparation</option>

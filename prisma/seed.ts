@@ -35,7 +35,7 @@ BT
 0 -30 Td
 (District Computer Centre - Authorized IT Education Centre, Tinsukia, Assam) Tj
 0 -20 Td
-(Official Study Material for DCA / PGDCSA / DO & FA Students) Tj
+(Official Study Material for DCA / PGDCSA / DOA & FA Students) Tj
 0 -30 Td
 (Key Topics:) Tj
 0 -20 Td

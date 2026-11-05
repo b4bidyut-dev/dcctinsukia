@@ -105,7 +105,7 @@ export default async function NotesLibraryPage({ searchParams }: LibraryProps) {
                 District Computer Centre Notes Library
               </h1>
               <p className="text-xs sm:text-sm text-emerald-100 max-w-2xl">
-                Official computer science modules, DCA, PGDCSA, DO &amp; FA notes, lab workbooks, and examination revision sets.
+                Official computer science modules, DCA, PGDCSA, DOA &amp; FA notes, lab workbooks, and examination revision sets.
               </p>
             </div>
 
