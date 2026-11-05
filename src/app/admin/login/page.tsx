@@ -50,8 +50,8 @@ export default function AdminLoginPage() {
     <div className="min-h-[80vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-slate-900">
       <div className="max-w-md w-full space-y-6 bg-slate-800 border border-slate-700 p-8 rounded-2xl shadow-2xl text-white">
         <div className="text-center">
-          <div className="mx-auto w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shadow-inner">
-            <Shield className="w-8 h-8" />
+          <div className="mx-auto h-16 px-4 py-2 bg-white rounded-2xl flex items-center justify-center shadow-lg w-fit">
+            <img src="/logo.png" alt="DCC Logo" className="h-10 w-auto object-contain" />
           </div>
           <h2 className="mt-4 text-2xl font-bold tracking-tight text-white">
             Administrative Portal

@@ -88,8 +88,8 @@ export default function Navbar() {
         <div className="flex justify-between h-18 items-center">
           {/* Logo / Brand */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-11 h-11 rounded-lg bg-gradient-to-tr from-amber-500 to-amber-400 flex items-center justify-center text-slate-950 font-bold shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
-              <GraduationCap className="w-6 h-6 text-slate-900" />
+            <div className="h-11 px-2.5 py-1 bg-white rounded-lg flex items-center justify-center shadow-md shadow-slate-950/20 group-hover:scale-105 transition-transform">
+              <img src="/logo.png" alt="DCC Logo" className="h-8 w-auto object-contain" />
             </div>
             <div>
               <div className="text-lg font-bold tracking-tight text-white flex items-center gap-1.5">

@@ -19,6 +19,9 @@ export default function AboutPage() {
         {/* Header Hero */}
         <div className="bg-[#0f2842] text-white p-8 sm:p-12 rounded-3xl shadow-xl relative overflow-hidden border border-[#1e4875]">
           <div className="relative z-10 max-w-2xl space-y-4">
+            <div className="h-14 px-3.5 py-1.5 bg-white rounded-xl flex items-center justify-center shadow w-fit">
+              <img src="/logo.png" alt="DCC Logo" className="h-9 w-auto object-contain" />
+            </div>
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-semibold">
               <ShieldCheck className="w-3.5 h-3.5" />
               Government Recognized Centre · Tinsukia, Assam

@@ -39,6 +39,10 @@ export default async function HomePage() {
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
 
         <div className="relative max-w-6xl mx-auto text-center space-y-6">
+          <div className="mx-auto h-20 px-6 py-2.5 bg-white rounded-2xl flex items-center justify-center shadow-xl w-fit mb-2">
+            <img src="/logo.png" alt="District Computer Centre Logo" className="h-14 w-auto object-contain" />
+          </div>
+
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             Official Academic Material Repository

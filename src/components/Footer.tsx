@@ -9,8 +9,8 @@ export default function Footer() {
           {/* Col 1: About DCC */}
           <div className="space-y-4 md:col-span-1">
             <div className="flex items-center space-x-3">
-              <div className="w-9 h-9 rounded-md bg-amber-500 flex items-center justify-center text-slate-950 font-bold">
-                <GraduationCap className="w-5 h-5" />
+              <div className="h-10 px-2.5 py-1 rounded-lg bg-white flex items-center justify-center shadow">
+                <img src="/logo.png" alt="DCC Logo" className="h-7 w-auto object-contain" />
               </div>
               <span className="text-lg font-bold text-white tracking-tight">DCC Tinsukia</span>
             </div>

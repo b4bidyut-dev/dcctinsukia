@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Official web-based portal for publishing, viewing, and downloading computer education notes for District Computer Centre Tinsukia students.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.png",
   },
 };
 

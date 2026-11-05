@@ -113,8 +113,8 @@ export default function LoginPage() {
     <div className="min-h-[80vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-slate-50">
       <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-2xl border border-slate-200 shadow-xl">
         <div className="text-center">
-          <div className="mx-auto w-12 h-12 rounded-xl bg-gradient-to-tr from-[#0f2842] to-blue-900 flex items-center justify-center text-amber-400 shadow-md">
-            <GraduationCap className="w-7 h-7" />
+          <div className="mx-auto h-16 px-4 py-2 bg-white border border-slate-200 rounded-xl flex items-center justify-center shadow-md w-fit">
+            <img src="/logo.png" alt="DCC Logo" className="h-10 w-auto object-contain" />
           </div>
           <h2 className="mt-4 text-2xl font-bold tracking-tight text-slate-900">
             Student Portal Login
