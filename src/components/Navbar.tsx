@@ -73,7 +73,7 @@ export default function Navbar() {
             <span className="text-slate-300 font-medium">Govt. of Assam Dept. of Secondary Education · DCC Tinsukia</span>
           </div>
           <div className="flex items-center space-x-4 text-slate-300">
-            <span>Help: <a href="tel:+918974738131" className="text-amber-400 font-bold hover:underline">+91-8974738131</a></span>
+            <span>Help: <a href="tel:+918974738121" className="text-amber-400 font-bold hover:underline">+91-8974738121</a></span>
             {user && (
               <span className="text-amber-300 font-medium border-l border-emerald-900 pl-3">
                 Welcome, {user.name} ({user.role})
@@ -345,11 +345,11 @@ export default function Navbar() {
 
           <div className="pt-3 border-t border-emerald-900/80 space-y-2">
             <a
-              href="tel:+918974738131"
+              href="tel:+918974738121"
               className="flex items-center justify-center gap-2 py-2.5 px-3 text-xs font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 rounded-lg shadow transition-colors"
             >
               <Phone className="w-4 h-4 text-slate-950" />
-              Call Helpline: +91-8974738131
+              Call Helpline: +91-8974738121
             </a>
             <div className="text-[11px] text-center text-emerald-200">
               Govt. of Assam Dept. of Secondary Education · AMTRON
