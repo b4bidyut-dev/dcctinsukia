@@ -128,13 +128,13 @@ export default async function NotesLibraryPage({ searchParams }: LibraryProps) {
         >
           {/* Search Bar */}
           <div className="md:col-span-4 relative">
-            <Search className="w-4 h-4 absolute left-3 top-3 text-slate-400 pointer-events-none" />
+            <Search className="w-4 h-4 absolute left-3 top-3 text-slate-500 pointer-events-none" />
             <input
               type="text"
               name="q"
               defaultValue={q}
               placeholder="Search notes by title, topic, or keyword..."
-              className="w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
+              className="w-full pl-10 pr-3 py-2 text-base sm:text-sm text-slate-900 font-semibold bg-white border-2 border-slate-300 rounded-lg placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none"
             />
           </div>
 
@@ -143,7 +143,7 @@ export default async function NotesLibraryPage({ searchParams }: LibraryProps) {
             <select
               name="category"
               defaultValue={selectedCategory}
-              className="w-full px-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none text-slate-700"
+              className="w-full px-3 py-2 text-base sm:text-sm text-slate-900 font-semibold bg-white border-2 border-slate-300 rounded-lg focus:bg-white focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none"
             >
               <option value="">All Subjects / Categories</option>
               {categories.map((cat) => (
@@ -159,7 +159,7 @@ export default async function NotesLibraryPage({ searchParams }: LibraryProps) {
             <select
               name="course"
               defaultValue={selectedCourse}
-              className="w-full px-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none text-slate-700"
+              className="w-full px-3 py-2 text-base sm:text-sm text-slate-900 font-semibold bg-white border-2 border-slate-300 rounded-lg focus:bg-white focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none"
             >
               <option value="">All Courses</option>
               {courses.map((course) => (
@@ -175,7 +175,7 @@ export default async function NotesLibraryPage({ searchParams }: LibraryProps) {
             <select
               name="sort"
               defaultValue={sortBy}
-              className="w-full px-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none text-slate-700"
+              className="w-full px-3 py-2 text-base sm:text-sm text-slate-900 font-semibold bg-white border-2 border-slate-300 rounded-lg focus:bg-white focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none"
             >
               <option value="newest">Sort: Newest First</option>
               <option value="downloads">Sort: Most Downloaded</option>

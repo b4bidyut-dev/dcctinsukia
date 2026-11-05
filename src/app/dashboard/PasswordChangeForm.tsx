@@ -65,8 +65,8 @@ export default function PasswordChangeForm() {
       )}
 
       <div>
-        <label className="block text-xs font-semibold text-slate-700 mb-1">
-          Current Password
+        <label className="block text-xs sm:text-sm font-bold text-slate-900 mb-1">
+          Current Password <span className="text-red-600">*</span>
         </label>
         <input
           type="password"
@@ -74,13 +74,13 @@ export default function PasswordChangeForm() {
           value={currentPassword}
           onChange={(e) => setCurrentPassword(e.target.value)}
           placeholder="••••••••"
-          className="w-full px-3 py-1.5 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
+          className="w-full px-3.5 py-2 text-base sm:text-xs text-slate-900 font-semibold bg-white border-2 border-slate-300 rounded-lg placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none transition-colors"
         />
       </div>
 
       <div>
-        <label className="block text-xs font-semibold text-slate-700 mb-1">
-          New Password (min 6 chars)
+        <label className="block text-xs sm:text-sm font-bold text-slate-900 mb-1">
+          New Password (min 6 chars) <span className="text-red-600">*</span>
         </label>
         <input
           type="password"
@@ -88,7 +88,7 @@ export default function PasswordChangeForm() {
           value={newPassword}
           onChange={(e) => setNewPassword(e.target.value)}
           placeholder="••••••••"
-          className="w-full px-3 py-1.5 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
+          className="w-full px-3.5 py-2 text-base sm:text-xs text-slate-900 font-semibold bg-white border-2 border-slate-300 rounded-lg placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none transition-colors"
         />
       </div>
 
