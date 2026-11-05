@@ -9,3 +9,4 @@ for /f "tokens=5" %%a in ('netstat -ano ^| findstr :3000 ^| findstr LISTENING') 
 taskkill /F /FI "WINDOWTITLE eq DCC*" >nul 2>&1
 echo Done! All portal services have stopped.
 timeout /t 3 >nul
+
