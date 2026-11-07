@@ -163,7 +163,7 @@ export default function AboutPage() {
         </div>
 
         {/* Contact & Location */}
-        <div className="bg-[#081f14] text-white p-8 rounded-2xl shadow-md border border-[#144229] space-y-6">
+        <div className="bg-[#070b14] text-white p-8 rounded-2xl shadow-md border border-slate-800 space-y-6">
           <h2 className="text-xl font-bold text-white flex items-center gap-2">
             <MapPin className="w-5 h-5 text-amber-400" />
             Centre Location & Inquiries
@@ -186,7 +186,7 @@ export default function AboutPage() {
                 </a>
               </p>
               <p>Working Hours: 8:00 AM - 6:00 PM (Mon-Sat)</p>
-              <p className="text-[11px] text-emerald-300 pt-1 border-t border-emerald-900">
+              <p className="text-[11px] text-amber-300 pt-1 border-t border-slate-800">
                 Developer: Bidyut Gogoi (9366125201)
               </p>
             </div>

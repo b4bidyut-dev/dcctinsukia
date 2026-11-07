@@ -44,7 +44,7 @@ export default async function UserDashboardPage() {
     <div className="bg-slate-50 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Welcome Banner */}
-        <div className="bg-[#0b291a] text-white p-6 sm:p-8 rounded-2xl shadow-lg border border-[#144229]">
+        <div className="bg-[#070b14] text-white p-6 sm:p-8 rounded-2xl shadow-lg border border-slate-800">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/40 mb-2">
@@ -54,7 +54,7 @@ export default async function UserDashboardPage() {
               <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
                 Welcome, {user.name}
               </h1>
-              <p className="text-xs sm:text-sm text-emerald-100 mt-1">
+              <p className="text-xs sm:text-sm text-slate-300 mt-1">
                 Access your course materials, download history, and student credentials.
               </p>
             </div>

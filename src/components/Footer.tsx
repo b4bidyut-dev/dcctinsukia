@@ -3,7 +3,7 @@ import { GraduationCap, MapPin, Mail, Phone, ShieldCheck, Heart, User, Clock } f
 
 export default function Footer() {
   return (
-    <footer className="bg-[#081f14] text-slate-300 border-t border-[#144229] mt-auto">
+    <footer className="bg-[#070b14] text-slate-300 border-t border-slate-800 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Col 1: About DCC */}
@@ -25,7 +25,7 @@ export default function Footer() {
 
           {/* Col 2: Quick Links */}
           <div className="space-y-3">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-amber-400 border-b border-emerald-900/80 pb-1.5">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-amber-400 border-b border-slate-800 pb-1.5">
               Portal Navigation
             </h3>
             <ul className="space-y-2 text-xs">
@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Col 3: Popular Courses */}
           <div className="space-y-3">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-amber-400 border-b border-emerald-900/80 pb-1.5">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-amber-400 border-b border-slate-800 pb-1.5">
               Offered Courses
             </h3>
             <ul className="space-y-2 text-xs text-slate-300">
@@ -75,7 +75,7 @@ export default function Footer() {
 
           {/* Col 4: Centre Location & Contact */}
           <div className="space-y-3">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-amber-400 border-b border-emerald-900/80 pb-1.5">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-amber-400 border-b border-slate-800 pb-1.5">
               Contact & Address
             </h3>
             <div className="space-y-2.5 text-xs text-slate-300">
@@ -93,7 +93,7 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>info@dcctinsukia.in</span>
               </div>
-              <div className="flex items-center space-x-2 text-[11px] text-amber-300/90 pt-1 border-t border-emerald-900/60">
+              <div className="flex items-center space-x-2 text-[11px] text-amber-300/90 pt-1 border-t border-slate-800">
                 <Clock className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                 <span>Hours: 8:00 AM - 6:00 PM (Mon-Sat)</span>
               </div>
@@ -102,8 +102,8 @@ export default function Footer() {
         </div>
 
         {/* Developer Credit Callout Box */}
-        <div className="mt-8 pt-6 border-t border-emerald-900/60 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-700/50 text-xs">
+        <div className="mt-8 pt-6 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700/60 text-xs">
             <span className="text-amber-400 font-bold">Developed by:</span>
             <span className="text-white font-semibold">Bidyut Gogoi</span>
             <span className="text-slate-400">|</span>

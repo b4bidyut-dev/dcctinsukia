@@ -34,22 +34,22 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section with Official Dark Green & Dark Yellow Theme + Semi-Transparent IT Tools Background */}
-      <section className="relative overflow-hidden bg-[#061c11] text-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-[#144229]">
-        {/* Semi-Transparent IT Tools Background Image */}
+      {/* Hero Section with Modern Dark Slate Theme + High-Visibility IT Tools Background */}
+      <section className="relative overflow-hidden bg-[#070b14] text-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+        {/* High-Visibility IT Tools Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 scale-105 pointer-events-none transition-opacity"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-85 pointer-events-none transition-opacity"
           style={{ backgroundImage: `url('/it-tools-hero-bg.jpg')` }}
         />
-        {/* Semi-Transparent Dark Green Tint Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#06180e]/75 via-[#0b291a]/65 to-[#06180e]/85 backdrop-blur-[2px] pointer-events-none" />
+        {/* Crystal Clear Translucent Dark Slate Vignette Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/35 to-slate-950/75 pointer-events-none" />
 
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
 
         <div className="relative max-w-5xl mx-auto text-center">
           {/* Semi-Transparent Frosted Glass Hero Container */}
-          <div className="backdrop-blur-md bg-[#06180e]/60 border border-emerald-500/30 p-6 sm:p-12 rounded-3xl shadow-2xl space-y-6">
+          <div className="backdrop-blur-md bg-slate-950/50 border border-white/20 p-6 sm:p-12 rounded-3xl shadow-2xl space-y-6">
             <div className="mx-auto h-20 px-6 py-2.5 bg-white rounded-2xl flex items-center justify-center shadow-xl w-fit mb-2">
               <img src="/logo.png" alt="District Computer Centre Logo" className="h-14 w-auto object-contain" />
             </div>
@@ -66,7 +66,7 @@ export default async function HomePage() {
               </span>
             </h1>
 
-            <p className="max-w-3xl mx-auto text-base sm:text-lg text-emerald-100 font-normal leading-relaxed">
+            <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-200 font-medium leading-relaxed">
               Centralized digital repository providing authenticated access to high-quality computer study notes, syllabus-aligned handouts, and lab documentation for all enrolled students.
             </p>
 
@@ -82,7 +82,7 @@ export default async function HomePage() {
 
               <Link
                 href="/register"
-                className="px-6 py-3.5 rounded-lg bg-[#144229]/80 hover:bg-[#195233] text-amber-300 font-bold text-sm border border-amber-500/40 backdrop-blur-sm transition-all"
+                className="px-6 py-3.5 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-amber-300 font-bold text-sm border border-amber-500/50 backdrop-blur-sm transition-all"
               >
                 Student Registration
               </Link>
@@ -91,40 +91,40 @@ export default async function HomePage() {
 
           {/* Quick Metrics Bar with Semi-Transparent Glass Cards */}
           <div className="pt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="p-4 rounded-xl bg-[#06180e]/70 border border-emerald-700/50 backdrop-blur-md shadow-lg">
+            <div className="p-4 rounded-xl bg-slate-950/60 border border-white/15 backdrop-blur-md shadow-lg">
               <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">{totalNotes}+</div>
-              <div className="text-xs text-emerald-200 mt-1 font-medium">Verified PDF Notes</div>
+              <div className="text-xs text-slate-300 mt-1 font-medium">Verified PDF Notes</div>
             </div>
-            <div className="p-4 rounded-xl bg-[#06180e]/70 border border-emerald-700/50 backdrop-blur-md shadow-lg">
+            <div className="p-4 rounded-xl bg-slate-950/60 border border-white/15 backdrop-blur-md shadow-lg">
               <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">{totalCategories}</div>
-              <div className="text-xs text-emerald-200 mt-1 font-medium">Academic Subjects</div>
+              <div className="text-xs text-slate-300 mt-1 font-medium">Academic Subjects</div>
             </div>
-            <div className="p-4 rounded-xl bg-[#06180e]/70 border border-emerald-700/50 backdrop-blur-md shadow-lg">
+            <div className="p-4 rounded-xl bg-slate-950/60 border border-white/15 backdrop-blur-md shadow-lg">
               <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">
                 {totalDownloads._sum.downloadCount || 100}+
               </div>
-              <div className="text-xs text-emerald-200 mt-1 font-medium">Study Notes Downloaded</div>
+              <div className="text-xs text-slate-300 mt-1 font-medium">Study Notes Downloaded</div>
             </div>
-            <div className="p-4 rounded-xl bg-[#06180e]/70 border border-emerald-700/50 backdrop-blur-md shadow-lg">
+            <div className="p-4 rounded-xl bg-slate-950/60 border border-white/15 backdrop-blur-md shadow-lg">
               <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">100%</div>
-              <div className="text-xs text-emerald-200 mt-1 font-medium">Faculty Authenticated</div>
+              <div className="text-xs text-slate-300 mt-1 font-medium">Faculty Authenticated</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Government Affiliation & History Banner */}
-      <div className="bg-[#081f14] text-white border-b border-[#144229] py-4 px-4 sm:px-6 lg:px-8">
+      <div className="bg-[#0b101d] text-white border-b border-slate-800 py-4 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-[#0b291a] border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 shadow-inner">
+            <div className="w-10 h-10 rounded-xl bg-slate-800/90 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 shadow-inner">
               <Building2 className="w-5 h-5" />
             </div>
             <div>
               <div className="text-[11px] font-bold uppercase tracking-wider text-amber-400 flex items-center gap-2 justify-center md:justify-start">
                 <span>Government Initiative</span>
                 <span className="w-1 h-1 rounded-full bg-amber-400"></span>
-                <span className="text-emerald-300">AMTRON Coordination</span>
+                <span className="text-amber-300">AMTRON Coordination</span>
               </div>
               <p className="text-xs sm:text-sm text-slate-200 mt-0.5 font-medium leading-relaxed">
                 Established under an initiative by AMTRON in coordination with the{" "}
@@ -137,7 +137,7 @@ export default async function HomePage() {
           </div>
           <Link
             href="/about"
-            className="text-xs font-bold text-amber-400 hover:text-amber-300 bg-[#0b291a] hover:bg-[#144229] border border-amber-500/40 px-3.5 py-2 rounded-lg shrink-0 flex items-center gap-1.5 transition-all shadow-sm"
+            className="text-xs font-bold text-amber-400 hover:text-amber-300 bg-slate-800 hover:bg-slate-700 border border-amber-500/40 px-3.5 py-2 rounded-lg shrink-0 flex items-center gap-1.5 transition-all shadow-sm"
           >
             About Centre <ArrowRight className="w-3.5 h-3.5" />
           </Link>
