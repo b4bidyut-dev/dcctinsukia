@@ -1,9 +1,16 @@
 import { PrismaClient } from "@prisma/client";
+import path from "path";
 
-// Ensure DATABASE_URL is set so build and prerender never crash even if env vars are unset
-if (!process.env.DATABASE_URL) {
-  process.env.DATABASE_URL = "file:./dev.db";
+function getDatabaseUrl(): string {
+  if (process.env.DATABASE_URL && !process.env.DATABASE_URL.startsWith("file:.")) {
+    return process.env.DATABASE_URL;
+  }
+  const dbPath = path.resolve(process.cwd(), "prisma", "dev.db");
+  return `file:${dbPath}`;
 }
+
+const resolvedDbUrl = getDatabaseUrl();
+process.env.DATABASE_URL = resolvedDbUrl;
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
@@ -14,7 +21,7 @@ export const prisma =
   new PrismaClient({
     datasources: {
       db: {
-        url: process.env.DATABASE_URL || "file:./dev.db",
+        url: resolvedDbUrl,
       },
     },
     log: process.env.NODE_ENV === "development" ? ["warn", "error"] : ["error"],
@@ -25,4 +32,3 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 export default prisma;
-

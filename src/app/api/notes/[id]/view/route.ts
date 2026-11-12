@@ -4,6 +4,8 @@ import { getCurrentUser } from "@/lib/auth";
 import { getStoredPdfPath, isValidPdf } from "@/lib/storage";
 import fs from "fs";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
