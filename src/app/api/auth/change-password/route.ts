@@ -1,6 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
-import { getCurrentUser, verifyPassword, hashPassword } from "@/lib/auth";
+import {
+  getCurrentUser,
+  verifyPassword,
+  hashPassword,
+  createVaultToken,
+  VAULT_COOKIE_NAME,
+} from "@/lib/auth";
 
 export async function POST(request: NextRequest) {
   try {
@@ -42,15 +48,44 @@ export async function POST(request: NextRequest) {
     }
 
     const newHash = await hashPassword(newPassword);
-    await prisma.user.update({
+    const updatedUser = await prisma.user.update({
       where: { id: user.id },
       data: { passwordHash: newHash },
     });
 
-    return NextResponse.json({
+    // Create updated vault token
+    const vaultToken = await createVaultToken({
+      userId: updatedUser.id,
+      email: updatedUser.email,
+      name: updatedUser.name,
+      passwordHash: newHash,
+      role: updatedUser.role as "ADMIN" | "USER",
+      phone: updatedUser.phone,
+      studentId: updatedUser.studentId,
+    });
+
+    const isHttps =
+      request.nextUrl.protocol === "https:" ||
+      request.headers.get("x-forwarded-proto") === "https" ||
+      process.env.NODE_ENV === "production";
+
+    const response = NextResponse.json({
       success: true,
       message: "Password updated successfully!",
+      vaultToken,
     });
+
+    response.cookies.set({
+      name: VAULT_COOKIE_NAME,
+      value: vaultToken,
+      httpOnly: true,
+      secure: isHttps,
+      sameSite: "lax",
+      maxAge: 60 * 60 * 24 * 365,
+      path: "/",
+    });
+
+    return response;
   } catch (error) {
     console.error("Change password error:", error);
     return NextResponse.json(

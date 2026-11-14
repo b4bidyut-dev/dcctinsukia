@@ -20,11 +20,21 @@ function LoginForm() {
     setError("");
     setLoading(true);
 
+    const cleanEmail = email.toLowerCase().trim();
+    let clientVaultToken: string | null = null;
+    try {
+      clientVaultToken =
+        localStorage.getItem("dcc_vault_" + cleanEmail) ||
+        localStorage.getItem("dcc_vault_" + localStorage.getItem("dcc_last_registered_email"));
+    } catch {
+      // Non-fatal
+    }
+
     try {
       const res = await fetch("/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email: cleanEmail, password, clientVaultToken }),
       });
 
       const data = await res.json();
@@ -33,6 +43,15 @@ function LoginForm() {
         setError(data.error || "Login failed. Please check your credentials.");
         setLoading(false);
         return;
+      }
+
+      if (data.vaultToken) {
+        try {
+          localStorage.setItem("dcc_vault_" + cleanEmail, data.vaultToken);
+          localStorage.setItem("dcc_last_registered_email", cleanEmail);
+        } catch {
+          // Non-fatal
+        }
       }
 
       const target = data.user?.role === "ADMIN" ? "/admin" : from;

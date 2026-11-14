@@ -1,6 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
-import { hashPassword, createSessionToken, COOKIE_NAME } from "@/lib/auth";
+import {
+  hashPassword,
+  createSessionToken,
+  createVaultToken,
+  COOKIE_NAME,
+  VAULT_COOKIE_NAME,
+} from "@/lib/auth";
 
 export async function POST(request: NextRequest) {
   try {
@@ -79,7 +85,7 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    // Automatically create session
+    // Automatically create session token
     const token = await createSessionToken({
       userId: newUser.id,
       email: newUser.email,
@@ -87,9 +93,21 @@ export async function POST(request: NextRequest) {
       name: newUser.name,
     });
 
+    // Generate cryptographic vault token for cross-container serverless persistence
+    const vaultToken = await createVaultToken({
+      userId: newUser.id,
+      email: newUser.email,
+      name: newUser.name,
+      passwordHash,
+      role: "USER",
+      phone: newUser.phone,
+      studentId: newUser.studentId,
+    });
+
     const response = NextResponse.json({
       success: true,
       message: "Registration successful! Welcome to DCC Tinsukia Notes Portal.",
+      vaultToken,
       user: {
         id: newUser.id,
         name: newUser.name,
@@ -99,7 +117,12 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    const isHttps = request.nextUrl.protocol === "https:";
+    const isHttps =
+      request.nextUrl.protocol === "https:" ||
+      request.headers.get("x-forwarded-proto") === "https" ||
+      process.env.NODE_ENV === "production";
+
+    // Set 7-day session cookie
     response.cookies.set({
       name: COOKIE_NAME,
       value: token,
@@ -107,6 +130,17 @@ export async function POST(request: NextRequest) {
       secure: isHttps,
       sameSite: "lax",
       maxAge: 60 * 60 * 24 * 7,
+      path: "/",
+    });
+
+    // Set 1-year persistent vault cookie
+    response.cookies.set({
+      name: VAULT_COOKIE_NAME,
+      value: vaultToken,
+      httpOnly: true,
+      secure: isHttps,
+      sameSite: "lax",
+      maxAge: 60 * 60 * 24 * 365, // 1 year persistence
       path: "/",
     });
 

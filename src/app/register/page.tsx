@@ -54,9 +54,19 @@ export default function RegisterPage() {
         return;
       }
 
+      // Save vault token to local storage for instant multi-session recovery
+      if (data.vaultToken) {
+        try {
+          const cleanEmail = form.email.toLowerCase().trim();
+          localStorage.setItem("dcc_vault_" + cleanEmail, data.vaultToken);
+          localStorage.setItem("dcc_last_registered_email", cleanEmail);
+        } catch {
+          // Non-fatal
+        }
+      }
+
       // Successful registration: redirected to library
-      router.push("/library");
-      router.refresh();
+      window.location.href = "/library";
     } catch {
       setError("An unexpected network error occurred. Please try again.");
       setLoading(false);

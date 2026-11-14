@@ -8,12 +8,23 @@ const JWT_SECRET = new TextEncoder().encode(
 );
 
 export const COOKIE_NAME = "dcc_session";
+export const VAULT_COOKIE_NAME = "dcc_account_vault";
 
 export interface TokenPayload {
   userId: string;
   email: string;
   role: "ADMIN" | "USER";
   name: string;
+}
+
+export interface VaultPayload {
+  userId: string;
+  email: string;
+  name: string;
+  passwordHash: string;
+  role: "ADMIN" | "USER";
+  phone?: string | null;
+  studentId?: string | null;
 }
 
 export async function hashPassword(password: string): Promise<string> {
@@ -36,6 +47,23 @@ export async function verifySessionToken(token: string): Promise<TokenPayload | 
   try {
     const { payload } = await jwtVerify(token, JWT_SECRET);
     return payload as unknown as TokenPayload;
+  } catch {
+    return null;
+  }
+}
+
+export async function createVaultToken(payload: VaultPayload): Promise<string> {
+  return new SignJWT({ ...payload })
+    .setProtectedHeader({ alg: "HS256" })
+    .setIssuedAt()
+    .setExpirationTime("365d")
+    .sign(JWT_SECRET);
+}
+
+export async function verifyVaultToken(token: string): Promise<VaultPayload | null> {
+  try {
+    const { payload } = await jwtVerify(token, JWT_SECRET);
+    return payload as unknown as VaultPayload;
   } catch {
     return null;
   }
@@ -86,6 +114,24 @@ export async function getCurrentUser(): Promise<{
     // The session token is cryptographically signed by the server with JWT_SECRET.
     // This guarantees the user stays logged in across all serverless lambda containers,
     // avoiding the issue where an ephemeral container doesn't have the newly registered student yet!
+    try {
+      await prisma.user.upsert({
+        where: { id: payload.userId },
+        update: { lastLoginAt: new Date() },
+        create: {
+          id: payload.userId,
+          name: payload.name || "Student",
+          email: payload.email,
+          role: (payload.role as string) || "USER",
+          status: "ACTIVE",
+          passwordHash: "JWT_MANAGED_SESSION",
+          lastLoginAt: new Date(),
+        },
+      });
+    } catch {
+      // Non-fatal stub persistence
+    }
+
     return {
       id: payload.userId,
       name: payload.name || "Student",

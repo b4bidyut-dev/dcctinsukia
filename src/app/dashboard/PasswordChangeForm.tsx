@@ -35,6 +35,15 @@ export default function PasswordChangeForm() {
         return;
       }
 
+      if (data.vaultToken) {
+        try {
+          const email = localStorage.getItem("dcc_last_registered_email");
+          if (email) localStorage.setItem("dcc_vault_" + email, data.vaultToken);
+        } catch {
+          // Non-fatal
+        }
+      }
+
       setMessage({ type: "success", text: "Password changed successfully!" });
       setCurrentPassword("");
       setNewPassword("");
