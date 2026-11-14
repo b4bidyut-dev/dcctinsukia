@@ -31,7 +31,7 @@ export default async function AdminManageNotesPage() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <Link
             href="/admin"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-emerald-900 transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-blue-950 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Admin Dashboard
@@ -39,7 +39,7 @@ export default async function AdminManageNotesPage() {
 
           <Link
             href="/admin/upload"
-            className="self-start sm:self-auto px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-sm transition-all flex items-center gap-1.5"
+            className="self-start sm:self-auto px-4 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-blue-950 font-extrabold text-xs shadow-sm transition-all flex items-center gap-1.5"
           >
             <Upload className="w-3.5 h-3.5" />
             Upload New Note

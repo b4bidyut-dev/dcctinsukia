@@ -66,7 +66,7 @@ function LoginForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="student@dcctinsukia.in"
-            className="block w-full pl-10 pr-3.5 py-2.5 text-base sm:text-sm text-slate-900 font-semibold bg-white border-2 border-slate-300 rounded-xl placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 shadow-sm transition-colors outline-none"
+            className="block w-full pl-10 pr-3.5 py-2.5 text-base sm:text-sm text-slate-900 font-semibold bg-white border-2 border-slate-300 rounded-xl placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:border-blue-900 focus:ring-2 focus:ring-yellow-400/30 shadow-sm transition-colors outline-none"
           />
         </div>
       </div>
@@ -87,7 +87,7 @@ function LoginForm() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="••••••••"
-            className="block w-full pl-10 pr-3.5 py-2.5 text-base sm:text-sm text-slate-900 font-semibold bg-white border-2 border-slate-300 rounded-xl placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 shadow-sm transition-colors outline-none"
+            className="block w-full pl-10 pr-3.5 py-2.5 text-base sm:text-sm text-slate-900 font-semibold bg-white border-2 border-slate-300 rounded-xl placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:border-blue-900 focus:ring-2 focus:ring-yellow-400/30 shadow-sm transition-colors outline-none"
           />
         </div>
       </div>
@@ -95,7 +95,7 @@ function LoginForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full py-3 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 active:bg-amber-600 text-slate-950 font-extrabold text-sm shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-60"
+        className="w-full py-3 px-4 rounded-xl bg-yellow-400 hover:bg-yellow-300 active:bg-yellow-500 text-blue-950 font-extrabold text-sm shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-60"
       >
         {loading ? "Verifying..." : "Sign In to Portal"}
         {!loading && <ArrowRight className="w-4 h-4" />}
@@ -106,16 +106,16 @@ function LoginForm() {
 
 export default function LoginPage() {
   return (
-    <div className="min-h-[80vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-slate-100/70">
-      <div className="max-w-md w-full space-y-8 bg-white p-6 sm:p-8 rounded-2xl border-2 border-slate-200 shadow-xl">
+    <div className="min-h-[80vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-[#f8faff]">
+      <div className="max-w-md w-full space-y-8 bg-white p-6 sm:p-8 rounded-2xl border-2 border-blue-100 shadow-xl">
         <div className="text-center">
-          <div className="mx-auto h-16 px-4 py-2 bg-white border border-slate-200 rounded-xl flex items-center justify-center shadow-md w-fit">
+          <div className="mx-auto h-16 px-4 py-2 bg-white border border-blue-100 rounded-xl flex items-center justify-center shadow-md w-fit">
             <img src="/logo.png" alt="DCC Logo" className="h-10 w-auto object-contain" />
           </div>
-          <h2 className="mt-4 text-2xl font-extrabold tracking-tight text-slate-900">
+          <h2 className="mt-4 text-2xl font-extrabold tracking-tight text-blue-950">
             Student Portal Login
           </h2>
-          <p className="mt-1.5 text-xs sm:text-sm text-slate-700 font-medium">
+          <p className="mt-1.5 text-xs sm:text-sm text-slate-600 font-medium">
             District Computer Centre Tinsukia Notes Portal
           </p>
         </div>
@@ -127,13 +127,13 @@ export default function LoginPage() {
         <div className="pt-4 border-t border-slate-200 flex flex-col space-y-3 text-center text-xs sm:text-sm">
           <div className="text-slate-700 font-medium">
             Don't have an account yet?{" "}
-            <Link href="/register" className="font-bold text-amber-600 hover:text-amber-700">
+            <Link href="/register" className="font-bold text-blue-900 hover:text-blue-700 underline decoration-yellow-400 underline-offset-2">
               Register here
             </Link>
           </div>
           <div className="text-slate-600">
             DCC Faculty / Staff?{" "}
-            <Link href="/admin/login" className="font-bold text-slate-800 hover:text-emerald-800 underline">
+            <Link href="/admin/login" className="font-bold text-slate-800 hover:text-blue-900 underline">
               Admin Portal Login
             </Link>
           </div>

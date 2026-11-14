@@ -177,7 +177,7 @@ export default function NotesManagementTable({
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search by title, topic, course..."
-            className="w-full pl-9 pr-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
+            className="w-full pl-9 pr-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
           />
         </div>
 
@@ -185,7 +185,7 @@ export default function NotesManagementTable({
           <select
             value={categoryFilter}
             onChange={(e) => setCategoryFilter(e.target.value)}
-            className="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
+            className="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
           >
             <option value="">All Categories / Subjects</option>
             {categories.map((c) => (
@@ -200,7 +200,7 @@ export default function NotesManagementTable({
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
+            className="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
           >
             <option value="">All Statuses</option>
             <option value="PUBLISHED">Published</option>
@@ -342,7 +342,7 @@ export default function NotesManagementTable({
                   onChange={(e) =>
                     setEditingNote({ ...editingNote, title: e.target.value })
                   }
-                  className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-700"
+                  className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-900"
                 />
               </div>
 
@@ -354,7 +354,7 @@ export default function NotesManagementTable({
                     onChange={(e) =>
                       setEditingNote({ ...editingNote, categoryId: e.target.value })
                     }
-                    className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-700"
+                    className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-900"
                   >
                     {categories.map((c) => (
                       <option key={c.id} value={c.id}>
@@ -371,7 +371,7 @@ export default function NotesManagementTable({
                     onChange={(e) =>
                       setEditingNote({ ...editingNote, status: e.target.value })
                     }
-                    className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-700"
+                    className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-900"
                   >
                     <option value="PUBLISHED">Published</option>
                     <option value="DRAFT">Draft</option>
@@ -389,7 +389,7 @@ export default function NotesManagementTable({
                     onChange={(e) =>
                       setEditingNote({ ...editingNote, course: e.target.value })
                     }
-                    className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-700"
+                    className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-900"
                   />
                 </div>
 
@@ -401,7 +401,7 @@ export default function NotesManagementTable({
                     onChange={(e) =>
                       setEditingNote({ ...editingNote, topic: e.target.value })
                     }
-                    className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-700"
+                    className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-900"
                   />
                 </div>
               </div>
@@ -414,7 +414,7 @@ export default function NotesManagementTable({
                   onChange={(e) =>
                     setEditingNote({ ...editingNote, description: e.target.value })
                   }
-                  className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-700"
+                  className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-900"
                 />
               </div>
 
@@ -429,7 +429,7 @@ export default function NotesManagementTable({
                 <button
                   type="submit"
                   disabled={editLoading}
-                  className="px-4 py-2 rounded-lg bg-[#0b291a] hover:bg-emerald-950 text-amber-300 font-bold disabled:opacity-60 border border-emerald-900"
+                  className="px-4 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-blue-950 font-extrabold disabled:opacity-60 shadow-sm transition-colors"
                 >
                   {editLoading ? "Saving..." : "Save Changes"}
                 </button>

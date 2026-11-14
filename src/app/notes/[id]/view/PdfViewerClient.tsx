@@ -51,27 +51,27 @@ export default function PdfViewerClient({ pdfUrl, title }: PdfViewerClientProps)
       }`}
     >
       {/* Control Toolbar */}
-      <div className="bg-[#0b291a] px-4 py-2 border-b border-[#144229] flex items-center justify-between text-xs text-slate-300">
+      <div className="bg-[#0a192f] px-4 py-2 border-b border-blue-900/70 flex items-center justify-between text-xs text-blue-100">
         <div className="flex items-center space-x-2">
-          <span className="font-medium text-slate-400">Zoom:</span>
+          <span className="font-medium text-blue-200">Zoom:</span>
           <button
             onClick={handleZoomOut}
-            className="p-1 rounded hover:bg-slate-700 text-slate-200 transition-colors"
+            className="p-1 rounded hover:bg-blue-900/60 text-white transition-colors"
             title="Zoom Out"
           >
             <ZoomOut className="w-4 h-4" />
           </button>
-          <span className="font-mono text-amber-400 w-12 text-center">{zoom}%</span>
+          <span className="font-mono text-yellow-400 font-bold w-12 text-center">{zoom}%</span>
           <button
             onClick={handleZoomIn}
-            className="p-1 rounded hover:bg-slate-700 text-slate-200 transition-colors"
+            className="p-1 rounded hover:bg-blue-900/60 text-white transition-colors"
             title="Zoom In"
           >
             <ZoomIn className="w-4 h-4" />
           </button>
           <button
             onClick={handleResetZoom}
-            className="px-2 py-0.5 rounded hover:bg-slate-700 text-[11px] text-slate-400 hover:text-white"
+            className="px-2 py-0.5 rounded hover:bg-blue-900/60 text-[11px] text-blue-200 hover:text-white"
           >
             Reset
           </button>
@@ -80,7 +80,7 @@ export default function PdfViewerClient({ pdfUrl, title }: PdfViewerClientProps)
         <div className="flex items-center space-x-2">
           <button
             onClick={toggleFullscreen}
-            className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 transition-colors"
+            className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-blue-900/80 hover:bg-blue-800 text-yellow-300 border border-blue-700 transition-colors font-medium"
             title={isFullscreen ? "Exit Fullscreen" : "Fullscreen Mode"}
           >
             {isFullscreen ? (
@@ -118,7 +118,7 @@ export default function PdfViewerClient({ pdfUrl, title }: PdfViewerClientProps)
                 href={pdfUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs flex items-center gap-2"
+                className="px-4 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-blue-950 font-extrabold text-xs flex items-center gap-2 shadow-md transition-all"
               >
                 <ExternalLink className="w-4 h-4" />
                 Open PDF in New Tab

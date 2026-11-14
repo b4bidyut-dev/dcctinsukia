@@ -41,27 +41,27 @@ export default async function UserDashboardPage() {
   });
 
   return (
-    <div className="bg-slate-50 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#f8faff] min-h-screen py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Welcome Banner */}
-        <div className="bg-[#070b14] text-white p-6 sm:p-8 rounded-2xl shadow-lg border border-slate-800">
+        <div className="bg-gradient-to-r from-[#0a192f] via-[#0f2744] to-[#1e3a8a] text-white p-6 sm:p-8 rounded-2xl shadow-xl border border-blue-900/60">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/40 mb-2">
-                <GraduationCap className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-400/20 text-yellow-300 text-xs font-bold border border-yellow-400/40 mb-2">
+                <GraduationCap className="w-3.5 h-3.5 text-yellow-400" />
                 Student Portal
               </div>
               <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-                Welcome, {user.name}
+                Welcome, <span className="text-yellow-400">{user.name}</span>
               </h1>
-              <p className="text-xs sm:text-sm text-slate-300 mt-1">
+              <p className="text-xs sm:text-sm text-blue-100 mt-1">
                 Access your course materials, download history, and student credentials.
               </p>
             </div>
 
             <Link
               href="/library"
-              className="self-start sm:self-auto px-5 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-md transition-all flex items-center gap-2"
+              className="self-start sm:self-auto px-5 py-2.5 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-blue-950 font-extrabold text-xs shadow-md transition-all flex items-center gap-2"
             >
               <BookOpen className="w-4 h-4" />
               Explore All Notes
@@ -197,17 +197,17 @@ export default async function UserDashboardPage() {
                       <div className="flex items-center space-x-2 shrink-0">
                         <Link
                           href={`/notes/${log.note.id}/view`}
-                          className="px-3 py-1.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium text-xs transition-colors flex items-center gap-1"
+                          className="px-3 py-1.5 rounded bg-blue-50 hover:bg-blue-100 text-blue-950 font-bold text-xs transition-colors flex items-center gap-1 border border-blue-200"
                         >
-                          <Eye className="w-3.5 h-3.5" />
+                          <Eye className="w-3.5 h-3.5 text-blue-700" />
                           View
                         </Link>
                         <a
                           href={`/api/notes/${log.note.id}/download`}
                           download
-                          className="px-3 py-1.5 rounded bg-[#0b291a] hover:bg-emerald-950 text-white font-medium text-xs transition-colors flex items-center gap-1 border border-emerald-900"
+                          className="px-3 py-1.5 rounded bg-yellow-400 hover:bg-yellow-300 text-blue-950 font-extrabold text-xs transition-colors flex items-center gap-1 shadow-sm"
                         >
-                          <Download className="w-3.5 h-3.5 text-amber-400" />
+                          <Download className="w-3.5 h-3.5 text-blue-950" />
                           Re-download
                         </a>
                       </div>

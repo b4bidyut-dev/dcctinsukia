@@ -161,20 +161,20 @@ export default function UploadFormClient({ categories }: UploadFormClientProps) 
         <div className="pt-2 flex flex-wrap justify-center gap-3">
           <Link
             href={`/notes/${successNoteId}/view`}
-            className="px-4 py-2 bg-[#0b291a] text-amber-300 text-xs font-bold rounded-lg hover:bg-emerald-950 flex items-center gap-1.5 shadow border border-emerald-900"
+            className="px-4 py-2 bg-[#0a192f] text-yellow-300 text-xs font-bold rounded-lg hover:bg-blue-900 flex items-center gap-1.5 shadow border border-blue-800"
           >
-            <Eye className="w-4 h-4 text-amber-400" />
+            <Eye className="w-4 h-4 text-yellow-400" />
             View Document Online
           </Link>
           <button
             onClick={resetForm}
-            className="px-4 py-2 bg-white text-slate-800 border border-slate-300 text-xs font-semibold rounded-lg hover:bg-slate-100"
+            className="px-4 py-2 bg-white text-blue-950 border border-blue-200 text-xs font-semibold rounded-lg hover:bg-blue-50"
           >
             Upload Another Note
           </button>
           <Link
             href="/admin"
-            className="px-4 py-2 bg-amber-500 text-slate-950 text-xs font-bold rounded-lg hover:bg-amber-400"
+            className="px-4 py-2 bg-yellow-400 text-blue-950 font-extrabold text-xs rounded-lg hover:bg-yellow-300 shadow-sm"
           >
             Back to Dashboard
           </Link>
@@ -261,7 +261,7 @@ export default function UploadFormClient({ categories }: UploadFormClientProps) 
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="e.g. Computer Fundamentals - Chapter 1: Introduction to Computing"
-          className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
+          className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
         />
       </div>
 
@@ -274,7 +274,7 @@ export default function UploadFormClient({ categories }: UploadFormClientProps) 
           <select
             value={categoryId}
             onChange={(e) => setCategoryId(e.target.value)}
-            className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
+            className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
           >
             {categories.map((cat) => (
               <option key={cat.id} value={cat.id}>
@@ -291,7 +291,7 @@ export default function UploadFormClient({ categories }: UploadFormClientProps) 
           <select
             value={course}
             onChange={(e) => setCourse(e.target.value)}
-            className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
+            className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
           >
             <option value="DCA">DCA (Diploma in Computer Application)</option>
             <option value="PGDCSA">PGDCSA (Post Graduate Diploma in Computer Software Applications)</option>
@@ -317,7 +317,7 @@ export default function UploadFormClient({ categories }: UploadFormClientProps) 
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
             placeholder="e.g. Unit 2: Storage Devices & Hierarchy"
-            className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
+            className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
           />
         </div>
 
@@ -330,7 +330,7 @@ export default function UploadFormClient({ categories }: UploadFormClientProps) 
             value={academicSession}
             onChange={(e) => setAcademicSession(e.target.value)}
             placeholder="2025-2026"
-            className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
+            className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
           />
         </div>
       </div>
@@ -345,7 +345,7 @@ export default function UploadFormClient({ categories }: UploadFormClientProps) 
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           placeholder="Brief description of topics covered, lab practice questions, and chapter summary..."
-          className="w-full px-3.5 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
+          className="w-full px-3.5 py-2 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
         />
       </div>
 
@@ -358,7 +358,7 @@ export default function UploadFormClient({ categories }: UploadFormClientProps) 
           <select
             value={status}
             onChange={(e) => setStatus(e.target.value)}
-            className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
+            className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
           >
             <option value="PUBLISHED">Published (Visible in student library)</option>
             <option value="DRAFT">Draft (Admin only, not visible to students)</option>
@@ -372,7 +372,7 @@ export default function UploadFormClient({ categories }: UploadFormClientProps) 
           <select
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
-            className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-700 outline-none"
+            className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-900 outline-none"
           >
             <option value="English">English</option>
             <option value="Assamese">Assamese (অসমীয়া)</option>
@@ -386,7 +386,7 @@ export default function UploadFormClient({ categories }: UploadFormClientProps) 
       <button
         type="submit"
         disabled={loading}
-        className="w-full py-3 px-6 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-60"
+        className="w-full py-3 px-6 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-blue-950 font-extrabold text-sm shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-60"
       >
         {loading ? "Validating & Uploading..." : "Upload & Save Document"}
         {!loading && <ArrowRight className="w-4 h-4" />}

@@ -67,16 +67,16 @@ export default async function AdminDashboardPage() {
     <div className="bg-slate-50 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Admin Header */}
-        <div className="bg-[#0b291a] text-white p-6 sm:p-8 rounded-2xl shadow-xl border border-[#144229] flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="bg-gradient-to-r from-[#0a192f] via-[#0f2744] to-[#1e3a8a] text-white p-6 sm:p-8 rounded-2xl shadow-xl border border-blue-900/60 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/40">
-              <Shield className="w-3.5 h-3.5 text-amber-400" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-400/20 text-yellow-300 text-xs font-bold border border-yellow-400/40">
+              <Shield className="w-3.5 h-3.5 text-yellow-400" />
               Administrative Control Centre · DCC Tinsukia
             </div>
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-              DCC Tinsukia Admin Dashboard
+              DCC Tinsukia <span className="text-yellow-400">Admin Dashboard</span>
             </h1>
-            <p className="text-xs sm:text-sm text-emerald-100 max-w-2xl">
+            <p className="text-xs sm:text-sm text-blue-100 max-w-2xl">
               System overview, upload control, student accounts, and secure document distribution analytics.
             </p>
           </div>
@@ -84,16 +84,16 @@ export default async function AdminDashboardPage() {
           <div className="flex flex-wrap items-center gap-3">
             <Link
               href="/admin/upload"
-              className="px-4 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-md transition-all flex items-center gap-2"
+              className="px-4 py-2.5 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-blue-950 font-extrabold text-xs shadow-md transition-all flex items-center gap-2"
             >
               <Upload className="w-4 h-4" />
               Upload PDF Note
             </Link>
             <Link
               href="/admin/notes"
-              className="px-4 py-2.5 rounded-lg bg-[#144229] hover:bg-[#1a5535] text-amber-300 font-bold text-xs border border-amber-500/40 transition-all flex items-center gap-2"
+              className="px-4 py-2.5 rounded-lg bg-blue-900/80 hover:bg-blue-800 text-yellow-300 font-bold text-xs border border-blue-700 transition-all flex items-center gap-2"
             >
-              <BookOpen className="w-4 h-4 text-amber-400" />
+              <BookOpen className="w-4 h-4 text-yellow-400" />
               Manage Notes
             </Link>
           </div>
@@ -142,7 +142,7 @@ export default async function AdminDashboardPage() {
               <div className="text-3xl font-extrabold text-slate-900 mt-1">{storageMB} MB</div>
               <div className="text-xs text-slate-500 mt-1">Local Isolated Storage</div>
             </div>
-            <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-yellow-50 text-yellow-700 flex items-center justify-center">
               <HardDrive className="w-6 h-6" />
             </div>
           </div>

@@ -74,7 +74,7 @@ export default function PasswordChangeForm() {
           value={currentPassword}
           onChange={(e) => setCurrentPassword(e.target.value)}
           placeholder="••••••••"
-          className="w-full px-3.5 py-2 text-base sm:text-xs text-slate-900 font-semibold bg-white border-2 border-slate-300 rounded-lg placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none transition-colors"
+          className="w-full px-3.5 py-2 text-base sm:text-xs text-slate-900 font-semibold bg-white border-2 border-slate-300 rounded-lg placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:border-blue-900 focus:ring-2 focus:ring-yellow-400/30 outline-none transition-colors"
         />
       </div>
 
@@ -88,14 +88,14 @@ export default function PasswordChangeForm() {
           value={newPassword}
           onChange={(e) => setNewPassword(e.target.value)}
           placeholder="••••••••"
-          className="w-full px-3.5 py-2 text-base sm:text-xs text-slate-900 font-semibold bg-white border-2 border-slate-300 rounded-lg placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none transition-colors"
+          className="w-full px-3.5 py-2 text-base sm:text-xs text-slate-900 font-semibold bg-white border-2 border-slate-300 rounded-lg placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:border-blue-900 focus:ring-2 focus:ring-yellow-400/30 outline-none transition-colors"
         />
       </div>
 
       <button
         type="submit"
         disabled={loading}
-        className="w-full py-2 bg-[#0b291a] hover:bg-emerald-950 text-amber-300 font-bold rounded-lg text-xs transition-colors disabled:opacity-60 border border-emerald-900"
+        className="w-full py-2.5 bg-yellow-400 hover:bg-yellow-300 text-blue-950 font-extrabold rounded-lg text-xs transition-colors disabled:opacity-60 shadow-sm"
       >
         {loading ? "Updating..." : "Update Password"}
       </button>

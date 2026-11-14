@@ -33,102 +33,102 @@ export default async function HomePage() {
   ]);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Hero Section with Modern Dark Slate Theme + High-Visibility IT Tools Background */}
-      <section className="relative overflow-hidden bg-[#070b14] text-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+    <div className="flex flex-col min-h-screen bg-[#f8faff]">
+      {/* Hero Section with Royal Blue Theme + High-Visibility IT Tools Background + Electric Yellow Accents */}
+      <section className="relative overflow-hidden bg-[#0a192f] text-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-blue-900/80">
         {/* High-Visibility IT Tools Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-85 pointer-events-none transition-opacity"
           style={{ backgroundImage: `url('/it-tools-hero-bg.jpg')` }}
         />
-        {/* Crystal Clear Translucent Dark Slate Vignette Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/35 to-slate-950/75 pointer-events-none" />
+        {/* Deep Royal Navy Vignette Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a192f]/80 via-[#0f2744]/45 to-[#0a192f]/85 pointer-events-none" />
 
-        {/* Subtle grid pattern */}
-        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+        {/* Subtle Yellow pattern */}
+        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#facc15_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
 
         <div className="relative max-w-5xl mx-auto text-center">
-          {/* Semi-Transparent Frosted Glass Hero Container */}
-          <div className="backdrop-blur-md bg-slate-950/50 border border-white/20 p-6 sm:p-12 rounded-3xl shadow-2xl space-y-6">
-            <div className="mx-auto h-20 px-6 py-2.5 bg-white rounded-2xl flex items-center justify-center shadow-xl w-fit mb-2">
+          {/* Frosted Royal Navy Glass Container */}
+          <div className="backdrop-blur-md bg-[#0a192f]/70 border-2 border-yellow-400/40 p-6 sm:p-12 rounded-3xl shadow-2xl space-y-6">
+            <div className="mx-auto h-20 px-6 py-2.5 bg-white rounded-2xl flex items-center justify-center shadow-xl w-fit mb-2 border border-blue-200">
               <img src="/logo.png" alt="District Computer Centre Logo" className="h-14 w-auto object-contain" />
             </div>
 
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/50 text-amber-300 text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-yellow-400/20 border border-yellow-400/60 text-yellow-300 text-xs font-extrabold uppercase tracking-wider backdrop-blur-sm shadow-sm">
+              <Sparkles className="w-3.5 h-3.5 text-yellow-400" />
               AMTRON Recognized · Govt. of Assam Dept. of Secondary Education
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
               District Computer Centre <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-200">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-200">
                 Tinsukia Notes Portal
               </span>
             </h1>
 
-            <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-200 font-medium leading-relaxed">
+            <p className="max-w-3xl mx-auto text-base sm:text-lg text-blue-100 font-medium leading-relaxed">
               Centralized digital repository providing authenticated access to high-quality computer study notes, syllabus-aligned handouts, and lab documentation for all enrolled students.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
               <Link
                 href="/library"
-                className="px-6 py-3.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-lg shadow-amber-500/30 flex items-center gap-2 transition-all transform hover:-translate-y-0.5"
+                className="px-6 py-3.5 rounded-xl bg-yellow-400 hover:bg-yellow-300 text-blue-950 font-extrabold text-sm shadow-lg shadow-yellow-500/30 flex items-center gap-2 transition-all transform hover:-translate-y-0.5"
               >
-                <BookOpen className="w-4 h-4" />
+                <BookOpen className="w-4 h-4 text-blue-950" />
                 Browse Notes Library
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 text-blue-950" />
               </Link>
 
               <Link
                 href="/register"
-                className="px-6 py-3.5 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-amber-300 font-bold text-sm border border-amber-500/50 backdrop-blur-sm transition-all"
+                className="px-6 py-3.5 rounded-xl bg-blue-950/80 hover:bg-blue-900 text-yellow-300 font-bold text-sm border-2 border-yellow-400/50 backdrop-blur-sm transition-all"
               >
                 Student Registration
               </Link>
             </div>
           </div>
 
-          {/* Quick Metrics Bar with Semi-Transparent Glass Cards */}
+          {/* Quick Metrics Bar with Blue Glass Cards */}
           <div className="pt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="p-4 rounded-xl bg-slate-950/60 border border-white/15 backdrop-blur-md shadow-lg">
-              <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">{totalNotes}+</div>
-              <div className="text-xs text-slate-300 mt-1 font-medium">Verified PDF Notes</div>
+            <div className="p-4 rounded-xl bg-[#0c213d]/85 border border-blue-700/60 backdrop-blur-md shadow-lg">
+              <div className="text-2xl sm:text-3xl font-extrabold text-yellow-400">{totalNotes}+</div>
+              <div className="text-xs text-blue-200 mt-1 font-semibold">Verified PDF Notes</div>
             </div>
-            <div className="p-4 rounded-xl bg-slate-950/60 border border-white/15 backdrop-blur-md shadow-lg">
-              <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">{totalCategories}</div>
-              <div className="text-xs text-slate-300 mt-1 font-medium">Academic Subjects</div>
+            <div className="p-4 rounded-xl bg-[#0c213d]/85 border border-blue-700/60 backdrop-blur-md shadow-lg">
+              <div className="text-2xl sm:text-3xl font-extrabold text-yellow-400">{totalCategories}</div>
+              <div className="text-xs text-blue-200 mt-1 font-semibold">Academic Subjects</div>
             </div>
-            <div className="p-4 rounded-xl bg-slate-950/60 border border-white/15 backdrop-blur-md shadow-lg">
-              <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">
+            <div className="p-4 rounded-xl bg-[#0c213d]/85 border border-blue-700/60 backdrop-blur-md shadow-lg">
+              <div className="text-2xl sm:text-3xl font-extrabold text-yellow-400">
                 {totalDownloads._sum.downloadCount || 100}+
               </div>
-              <div className="text-xs text-slate-300 mt-1 font-medium">Study Notes Downloaded</div>
+              <div className="text-xs text-blue-200 mt-1 font-semibold">Study Notes Downloaded</div>
             </div>
-            <div className="p-4 rounded-xl bg-slate-950/60 border border-white/15 backdrop-blur-md shadow-lg">
-              <div className="text-2xl sm:text-3xl font-extrabold text-amber-400">100%</div>
-              <div className="text-xs text-slate-300 mt-1 font-medium">Faculty Authenticated</div>
+            <div className="p-4 rounded-xl bg-[#0c213d]/85 border border-blue-700/60 backdrop-blur-md shadow-lg">
+              <div className="text-2xl sm:text-3xl font-extrabold text-yellow-400">100%</div>
+              <div className="text-xs text-blue-200 mt-1 font-semibold">Faculty Authenticated</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Government Affiliation & History Banner */}
-      <div className="bg-[#0b101d] text-white border-b border-slate-800 py-4 px-4 sm:px-6 lg:px-8">
+      <div className="bg-[#081528] text-white border-b border-blue-900/80 py-4 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-slate-800/90 border border-amber-500/30 flex items-center justify-center shrink-0 text-amber-400 shadow-inner">
+            <div className="w-10 h-10 rounded-xl bg-blue-900/80 border border-yellow-400/40 flex items-center justify-center shrink-0 text-yellow-400 shadow-inner">
               <Building2 className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-[11px] font-bold uppercase tracking-wider text-amber-400 flex items-center gap-2 justify-center md:justify-start">
+              <div className="text-[11px] font-extrabold uppercase tracking-wider text-yellow-400 flex items-center gap-2 justify-center md:justify-start">
                 <span>Government Initiative</span>
-                <span className="w-1 h-1 rounded-full bg-amber-400"></span>
-                <span className="text-amber-300">AMTRON Coordination</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
+                <span className="text-yellow-300">AMTRON Coordination</span>
               </div>
-              <p className="text-xs sm:text-sm text-slate-200 mt-0.5 font-medium leading-relaxed">
+              <p className="text-xs sm:text-sm text-blue-100 mt-0.5 font-medium leading-relaxed">
                 Established under an initiative by AMTRON in coordination with the{" "}
-                <span className="text-amber-300 font-bold">
+                <span className="text-yellow-300 font-bold">
                   Government of Assam&apos;s Department of Secondary Education
                 </span>{" "}
                 (originally under the 11th Finance Commission Computer Education Programme).
@@ -137,7 +137,7 @@ export default async function HomePage() {
           </div>
           <Link
             href="/about"
-            className="text-xs font-bold text-amber-400 hover:text-amber-300 bg-slate-800 hover:bg-slate-700 border border-amber-500/40 px-3.5 py-2 rounded-lg shrink-0 flex items-center gap-1.5 transition-all shadow-sm"
+            className="text-xs font-extrabold text-blue-950 bg-yellow-400 hover:bg-yellow-300 px-4 py-2 rounded-xl shrink-0 flex items-center gap-1.5 transition-all shadow-md"
           >
             About Centre <ArrowRight className="w-3.5 h-3.5" />
           </Link>
@@ -148,11 +148,11 @@ export default async function HomePage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
           <div>
-            <div className="text-xs font-bold text-emerald-800 uppercase tracking-wider flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-amber-500 inline-block"></span>
+            <div className="text-xs font-extrabold text-blue-900 uppercase tracking-wider flex items-center gap-1.5">
+              <span className="w-2.5 h-2.5 rounded-full bg-yellow-400 inline-block shadow-sm"></span>
               Study Curriculum
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
               Recently Published Notes
             </h2>
             <p className="text-sm text-slate-600 mt-1">
@@ -161,10 +161,10 @@ export default async function HomePage() {
           </div>
           <Link
             href="/library"
-            className="mt-4 sm:mt-0 inline-flex items-center gap-1.5 text-sm font-bold text-emerald-900 hover:text-amber-600 transition-colors"
+            className="mt-4 sm:mt-0 inline-flex items-center gap-1.5 text-sm font-bold text-blue-700 hover:text-blue-900 transition-colors"
           >
             View all published notes
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 text-yellow-500" />
           </Link>
         </div>
 
@@ -172,14 +172,14 @@ export default async function HomePage() {
           {recentNotes.map((note) => (
             <div
               key={note.id}
-              className="bg-white rounded-xl border border-slate-200 hover:border-amber-400 shadow-sm hover:shadow-md transition-all flex flex-col p-6 group"
+              className="bg-white rounded-2xl border-2 border-slate-200 hover:border-yellow-400 shadow-sm hover:shadow-lg transition-all flex flex-col p-6 group"
             >
               <div className="flex items-start justify-between gap-3 mb-3">
-                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-50 text-emerald-900 border border-emerald-200">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-extrabold bg-blue-50 text-blue-950 border border-blue-200">
                   {note.category.name}
                 </span>
-                <span className="text-[11px] font-mono text-slate-400 flex items-center gap-1">
-                  <Clock className="w-3 h-3" />
+                <span className="text-[11px] font-mono text-slate-500 flex items-center gap-1">
+                  <Clock className="w-3 h-3 text-yellow-500" />
                   {new Date(note.publicationDate).toLocaleDateString("en-IN", {
                     day: "numeric",
                     month: "short",
@@ -188,7 +188,7 @@ export default async function HomePage() {
                 </span>
               </div>
 
-              <h3 className="text-base font-bold text-slate-900 group-hover:text-emerald-900 transition-colors line-clamp-2 mb-2">
+              <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-700 transition-colors line-clamp-2 mb-2">
                 {note.title}
               </h3>
 
@@ -197,9 +197,9 @@ export default async function HomePage() {
               </p>
 
               {note.course && (
-                <div className="text-[11px] text-slate-500 mb-4 flex items-center gap-1.5">
-                  <span className="font-semibold text-slate-700">Course:</span>
-                  <span className="bg-amber-50 border border-amber-200 px-2 py-0.5 rounded text-amber-900 font-semibold">{note.course}</span>
+                <div className="text-[11px] text-slate-600 mb-4 flex items-center gap-1.5">
+                  <span className="font-bold text-slate-700">Course:</span>
+                  <span className="bg-yellow-100 border border-yellow-300 px-2.5 py-0.5 rounded-lg text-yellow-950 font-bold">{note.course}</span>
                 </div>
               )}
 
@@ -211,13 +211,13 @@ export default async function HomePage() {
                 <div className="flex items-center space-x-2">
                   <Link
                     href={`/notes/${note.id}/view`}
-                    className="px-3 py-1.5 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-900 font-semibold transition-colors"
+                    className="px-3.5 py-1.5 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-950 font-bold border border-blue-200 transition-colors"
                   >
                     View
                   </Link>
                   <Link
                     href={`/notes/${note.id}`}
-                    className="px-3 py-1.5 rounded bg-[#0b291a] hover:bg-emerald-950 text-amber-300 font-semibold transition-colors"
+                    className="px-3.5 py-1.5 rounded-xl bg-[#0a192f] hover:bg-blue-950 text-yellow-300 font-bold transition-colors"
                   >
                     Details
                   </Link>
@@ -228,11 +228,11 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Core Advantages Section */}
-      <section className="bg-emerald-50/50 border-y border-emerald-100 py-16 px-4 sm:px-6 lg:px-8">
+      {/* Core Advantages Section with Soft Ice Blue Background */}
+      <section className="bg-blue-50/70 border-y border-blue-200/80 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
               Why District Computer Centre Digital Notes?
             </h2>
             <p className="text-sm text-slate-600 mt-2">
@@ -241,8 +241,8 @@ export default async function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
-              <div className="w-12 h-12 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
+            <div className="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-yellow-100 text-yellow-800 flex items-center justify-center font-bold">
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <h3 className="text-base font-bold text-slate-900">100% Faculty Authenticated</h3>
@@ -251,8 +251,8 @@ export default async function HomePage() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
-              <div className="w-12 h-12 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">
+            <div className="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-900 flex items-center justify-center font-bold">
                 <Layers className="w-6 h-6" />
               </div>
               <h3 className="text-base font-bold text-slate-900">Interactive Online PDF Reader</h3>
@@ -261,8 +261,8 @@ export default async function HomePage() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
-              <div className="w-12 h-12 rounded-lg bg-yellow-100 text-yellow-800 flex items-center justify-center font-bold">
+            <div className="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-yellow-400 text-blue-950 flex items-center justify-center font-bold shadow-sm">
                 <Download className="w-6 h-6" />
               </div>
               <h3 className="text-base font-bold text-slate-900">Offline Download & Re-use</h3>
@@ -274,25 +274,25 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Banner / CTA Section */}
-      <section className="bg-[#0b291a] text-white py-14 px-4 sm:px-6 lg:px-8 border-t border-amber-500/30">
+      {/* Banner / CTA Section in Royal Blue with Yellow Call-to-Action */}
+      <section className="bg-[#0a192f] text-white py-14 px-4 sm:px-6 lg:px-8 border-t-2 border-yellow-400/50">
         <div className="max-w-5xl mx-auto text-center space-y-4">
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
             Ready to access your DCC course material?
           </h2>
-          <p className="text-sm text-emerald-100 max-w-2xl mx-auto">
+          <p className="text-sm text-blue-100 max-w-2xl mx-auto">
             Log in with your student credentials or register your account to view and download all course modules.
           </p>
           <div className="pt-2 flex justify-center gap-4">
             <Link
               href="/register"
-              className="px-6 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-lg text-sm shadow transition-all"
+              className="px-6 py-3 bg-yellow-400 hover:bg-yellow-300 text-blue-950 font-extrabold rounded-xl text-sm shadow-lg shadow-yellow-500/25 transition-all"
             >
               Register Now
             </Link>
             <Link
               href="/login"
-              className="px-6 py-2.5 bg-[#144229] hover:bg-[#1a5535] text-amber-300 font-bold rounded-lg text-sm border border-amber-500/40 transition-all"
+              className="px-6 py-3 bg-blue-900/90 hover:bg-blue-800 text-yellow-300 font-bold rounded-xl text-sm border-2 border-yellow-400/50 transition-all"
             >
               Student Login
             </Link>

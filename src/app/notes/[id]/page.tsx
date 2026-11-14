@@ -49,22 +49,22 @@ export default async function NoteDetailsPage({ params }: NoteDetailsProps) {
         {/* Navigation Breadcrumb */}
         <Link
           href="/library"
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-emerald-900 transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-blue-950 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Notes Library
         </Link>
 
         {/* Main Note Card */}
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+        <div className="bg-white rounded-2xl border border-blue-100 shadow-sm overflow-hidden">
           {/* Card Header Banner */}
-          <div className="bg-[#0b291a] text-white p-6 sm:p-8">
+          <div className="bg-gradient-to-r from-[#0a192f] via-[#0f2744] to-[#1e3a8a] text-white p-6 sm:p-8 border-b border-blue-900/60">
             <div className="flex flex-wrap items-center gap-2 mb-3">
-              <span className="px-3 py-1 rounded-md text-xs font-bold bg-amber-500 text-slate-950">
+              <span className="px-3 py-1 rounded-md text-xs font-extrabold bg-yellow-400 text-blue-950 shadow-sm">
                 {note.category.name}
               </span>
               {note.course && (
-                <span className="px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-900/60 text-emerald-200 border border-emerald-700">
+                <span className="px-2.5 py-1 rounded-md text-xs font-medium bg-blue-900/80 text-yellow-300 border border-blue-700">
                   {note.course}
                 </span>
               )}
@@ -79,9 +79,9 @@ export default async function NoteDetailsPage({ params }: NoteDetailsProps) {
               {note.title}
             </h1>
 
-            <div className="flex flex-wrap items-center gap-4 text-xs text-slate-300">
+            <div className="flex flex-wrap items-center gap-4 text-xs text-blue-200">
               <span className="flex items-center gap-1.5">
-                <Calendar className="w-4 h-4 text-amber-400" />
+                <Calendar className="w-4 h-4 text-yellow-400" />
                 Published: {new Date(note.publicationDate).toLocaleDateString("en-IN", {
                   day: "numeric",
                   month: "long",
@@ -89,14 +89,14 @@ export default async function NoteDetailsPage({ params }: NoteDetailsProps) {
                 })}
               </span>
               <span className="flex items-center gap-1.5">
-                <User className="w-4 h-4 text-amber-400" />
+                <User className="w-4 h-4 text-yellow-400" />
                 Faculty: {note.uploadedBy.name}
               </span>
             </div>
           </div>
 
           {/* Action Row */}
-          <div className="bg-slate-100/80 px-6 sm:px-8 py-4 border-b border-slate-200 flex flex-wrap items-center justify-between gap-4">
+          <div className="bg-blue-50/50 px-6 sm:px-8 py-4 border-b border-blue-100 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center space-x-4 text-xs font-mono text-slate-600">
               <span>Size: {(note.fileSize / 1024).toFixed(1)} KB</span>
               <span>•</span>
@@ -108,16 +108,16 @@ export default async function NoteDetailsPage({ params }: NoteDetailsProps) {
             <div className="flex items-center space-x-3">
               <Link
                 href={`/notes/${note.id}/view`}
-                className="px-4 py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-900 font-bold text-xs border border-emerald-200 transition-colors flex items-center gap-1.5 shadow-sm"
+                className="px-4 py-2 rounded-lg bg-white hover:bg-blue-50 text-blue-950 font-bold text-xs border border-blue-200 transition-colors flex items-center gap-1.5 shadow-sm"
               >
-                <Eye className="w-4 h-4 text-emerald-700" />
+                <Eye className="w-4 h-4 text-blue-800" />
                 Read Online
               </Link>
 
               <a
                 href={`/api/notes/${note.id}/download`}
                 download
-                className="px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-md transition-all flex items-center gap-1.5"
+                className="px-4 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-blue-950 font-extrabold text-xs shadow-md transition-all flex items-center gap-1.5"
               >
                 <Download className="w-4 h-4" />
                 Download PDF
