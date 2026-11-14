@@ -82,7 +82,11 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    const isHttps = request.nextUrl.protocol === "https:";
+    const isHttps =
+      request.nextUrl.protocol === "https:" ||
+      request.headers.get("x-forwarded-proto") === "https" ||
+      process.env.NODE_ENV === "production";
+
     response.cookies.set({
       name: COOKIE_NAME,
       value: token,

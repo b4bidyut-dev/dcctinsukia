@@ -35,12 +35,8 @@ function LoginForm() {
         return;
       }
 
-      if (data.user?.role === "ADMIN") {
-        router.push("/admin");
-      } else {
-        router.push(from);
-      }
-      router.refresh();
+      const target = data.user?.role === "ADMIN" ? "/admin" : from;
+      window.location.href = target;
     } catch {
       setError("An unexpected network error occurred. Please try again.");
       setLoading(false);

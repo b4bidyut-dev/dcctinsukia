@@ -19,12 +19,11 @@ interface PageProps {
 }
 
 export default async function NoteViewPage({ params }: PageProps) {
+  const { id } = await params;
   const user = await getCurrentUser();
   if (!user) {
-    redirect("/login");
+    redirect(`/login?from=/notes/${id}/view`);
   }
-
-  const { id } = await params;
 
   const note = await prisma.note.findUnique({
     where: { id },

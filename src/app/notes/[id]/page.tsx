@@ -21,12 +21,11 @@ interface NoteDetailsProps {
 }
 
 export default async function NoteDetailsPage({ params }: NoteDetailsProps) {
+  const { id } = await params;
   const user = await getCurrentUser();
   if (!user) {
-    redirect("/login");
+    redirect(`/login?from=/notes/${id}`);
   }
-
-  const { id } = await params;
 
   const note = await prisma.note.findUnique({
     where: { id },
