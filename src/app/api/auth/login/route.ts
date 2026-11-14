@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 import { verifyPassword, createSessionToken, COOKIE_NAME } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request: NextRequest) {
   try {
     const { email, password } = await request.json();
@@ -39,24 +41,27 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Update last login
-    await prisma.user.update({
-      where: { id: user.id },
-      data: { lastLoginAt: new Date() },
-    });
+    // Attempt non-fatal database updates (lastLoginAt & activity log)
+    try {
+      await prisma.user.update({
+        where: { id: user.id },
+        data: { lastLoginAt: new Date() },
+      });
 
-    // Log activity
-    const ip = request.headers.get("x-forwarded-for") || "127.0.0.1";
-    await prisma.activityLog.create({
-      data: {
-        userId: user.id,
-        action: "USER_LOGIN",
-        targetType: "AUTH",
-        targetId: user.id,
-        details: `Logged in as ${user.role}`,
-        ipAddress: ip,
-      },
-    });
+      const ip = request.headers.get("x-forwarded-for") || "127.0.0.1";
+      await prisma.activityLog.create({
+        data: {
+          userId: user.id,
+          action: "USER_LOGIN",
+          targetType: "AUTH",
+          targetId: user.id,
+          details: `Logged in as ${user.role}`,
+          ipAddress: ip,
+        },
+      });
+    } catch (logError) {
+      console.warn("Non-fatal error updating last login / activity log:", logError);
+    }
 
     // Create session token
     const token = await createSessionToken({
@@ -90,11 +95,13 @@ export async function POST(request: NextRequest) {
 
     return response;
   } catch (error) {
-    console.error("Login error:", error);
+    console.error("Login critical error:", error);
+    const message = error instanceof Error ? error.message : "An unexpected error occurred during login. Please try again.";
     return NextResponse.json(
-      { error: "An unexpected error occurred during login. Please try again." },
+      { error: message },
       { status: 500 }
     );
   }
 }
+
 
